@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import { Navbar } from "./Navbar";
+
+import { Footer } from "../Footer/Footer";
+import { Navbar } from "../Navbar/Navbar";
 import { Header, MainContainer } from './PostAdStyles';
 import { RenderCategories } from "./RenderCategories";
 export const PostAd = () => {
@@ -9,9 +11,10 @@ export const PostAd = () => {
 
     return (
     <MainContainer>
-        <Navbar />
+        <Navbar/>
         <Header>POST YOUR AD</Header>
         <RenderCategories />
+        <Footer/>
     </MainContainer>
     );
 }

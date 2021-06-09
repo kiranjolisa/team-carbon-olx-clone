@@ -4,8 +4,10 @@ import styled from 'styled-components';
 export const StyledNav = styled.nav`
 display : flex;
 height : 12vh;
-width : 100vw;
+width : 99vw;
 background-color : #f7f8f9;
+position: sticky;
+top: 0;
 // box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
 
 export const NavLogo = styled.img`

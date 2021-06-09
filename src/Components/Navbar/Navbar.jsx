@@ -10,7 +10,7 @@ export const Navbar = () => {
             <span><LeftArrow src = {leftArrow} alt = 'left arrow icon'/></span>
             </LinkedArrow>
 
-            <Link>
+            <Link to = '/'>
             <NavLogo 
             src = {olxPostLogo} 
             alt = 'Olx Logo' />

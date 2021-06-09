@@ -7,6 +7,12 @@ width : 100vw;
 height : 100vh;
 justify-content : top;
 align-items : center;
+direction: ltr;
+text-align: left;
+text-size-adjust: 100%;
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+background-color: #fff;
 `
 
 export const Header = styled.h1`
