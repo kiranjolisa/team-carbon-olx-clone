@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
-import {getCarsData} from "../Redux/products/action"
-import { VehicleCard } from './Cards/VehicleCard'
+import {getSalesHouseData} from "../Redux/products/action"
 import {LoadingIndicator} from "../Components/LoadingIndicator"
+import { HouseCard } from './Cards/HouseCard'
 
 export const HouseForSale = () => {
     const dispatch = useDispatch()
@@ -13,7 +13,7 @@ export const HouseForSale = () => {
     }, [dispatch])
     
     const showData = () => {
-        dispatch(getCarsData())
+        dispatch(getSalesHouseData())
     }
     
     return isLoading ? (
@@ -21,7 +21,7 @@ export const HouseForSale = () => {
     ) : (
         <div>
             {products.map((item) => {
-                return <VehicleCard {...item} />
+                return <HouseCard {...item} />
             })}
         </div>
     )

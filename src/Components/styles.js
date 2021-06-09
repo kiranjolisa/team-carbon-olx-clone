@@ -75,7 +75,7 @@ export const NavbarWrapper = styled.div`
         border-right: 5px solid #3A77FF;
         border-left: 5px solid #FFCE32;
         border-bottom: 5px solid #FFCE32;
-        border-radius: 34%;
+        border-radius: 50%;
         height: 7vh;
         margin: 0.5% 0 0 35%;
         font-size: 15px;
@@ -117,6 +117,7 @@ export const FooterWrapper = styled.div`
     flex-direction: row;
     background: #EBEEEF;
     height: 28vh;
+    margin-top: 4.8%;
 
     div:nth-child(1) {
         margin-left: 10%;
@@ -181,6 +182,7 @@ export const FooterWrapperBottom = styled.div`
     background: #002F34;
     color: #fff;
     font-size: 13px;
+    height: 8vh;
 
     div:nth-child(1) {
         margin-left: 9%;
@@ -221,7 +223,7 @@ export const Wrapper = styled.div`
     
 `
 
-export const VehicleCardWrapper = styled.div`
+export const CardWrapper = styled.div`
     border: 1px solid #CCD5D6;
     border-radius: 5px;
     text-align: left;

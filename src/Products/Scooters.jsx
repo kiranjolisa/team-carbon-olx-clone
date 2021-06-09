@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
-import {getCarsData} from "../Redux/products/action"
+import { getScootersData} from "../Redux/products/action"
 import { VehicleCard } from './Cards/VehicleCard'
 import {LoadingIndicator} from "../Components/LoadingIndicator"
 
@@ -13,7 +13,7 @@ export const Scooters = () => {
     }, [dispatch])
     
     const showData = () => {
-        dispatch(getCarsData())
+        dispatch(getScootersData())
     }
     
     return isLoading ? (
