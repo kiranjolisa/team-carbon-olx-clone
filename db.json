@@ -31,6 +31,23 @@
       "featured": false,
       "adPostDate": "6/10/2021",
       "id": 2
+    },
+    {
+      "title": "Fitness training",
+      "description": "lorkklsdkf;olkfeol k ikop; weowperipo[waeri[wpe w[pe r\nrfasaekle;lkwerwaeporawepop[fkklbmfdlkogo\n  e asweofrawepoklrp[wep[werew",
+      "price": "1200",
+      "state": "Assam",
+      "defaultName": "Masai School",
+      "imageUrls": [
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2F5847f98fcef1014c0b5e48c0.png?alt=media&token=70971648-5494-41b3-b993-049a65fa0fff",
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Ftransip-stack.png?alt=media&token=4beb1ea5-1306-4259-956a-c00c80ed856f",
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Fnewplot.png?alt=media&token=f1b5b1e6-c34f-4a10-b2b3-caebfb8530fa"
+      ],
+      "mainCategory": "Books, Sports & Hobbies",
+      "subCategory": "Gym & Fitness",
+      "featured": false,
+      "adPostDate": "6/10/2021",
+      "id": 3
     }
   ]
 }
