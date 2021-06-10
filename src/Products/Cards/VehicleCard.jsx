@@ -6,10 +6,12 @@ export const VehicleCard = ({image, price, year, distance, address, postDate, br
 
 
     return (
-        <Wrapper>
+        // <Wrapper style={{border: "2px solid red"}}>
             <CardWrapper>
                 <div>
+                    <div></div>
                     <img src= {image} alt= {image} />
+                    <div></div>
                     <button><FiHeart/></button>
                 </div>
                 <div>
@@ -22,6 +24,6 @@ export const VehicleCard = ({image, price, year, distance, address, postDate, br
                     <p> {postDate}</p>
                 </div>       
             </CardWrapper>
-        </Wrapper>
+        // </Wrapper>
     )
 }
