@@ -1,0 +1,150 @@
+.loginContainer {
+    border: 2px solid red;
+    width: 28%;
+    border-radius: 5px;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+.loginContainer > div {
+    margin-top: 2%;
+}
+
+.contentStyle {
+    height: 160px;
+    color: white;
+    text-align: center;
+    background: black;
+}
+
+.icon {
+    /* border: 2px solid red; */
+    width: 96%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon > div {
+    cursor: pointer;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.flexButton {
+    display: flex;
+    padding: 2% 4%;
+    align-items: center;
+    border: 2px solid black;
+    width: 90%;
+    margin: auto;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.flexButton > div:nth-child(2) {
+    margin-left: 3%;
+}
+
+.flexButton:hover {
+    border: 4px solid black;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.bottomTicker {
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.bottomTicker > div:nth-child(2) {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bottomTicker > div:nth-child(3), .bottomTicker > div:nth-child(4) {
+    font-size: 12px;
+}
+
+.bottomTicker > div {
+    margin-top: 5%;
+}
+
+.bottomTicker span {
+    color: blue;
+    cursor: pointer;
+}
+
+.silver {
+    color: rgba(0,47,52,.64);
+}
+
+.box {
+    /* border: 2px solid red; */
+    width: 90%;
+    margin-top: 5%;
+    margin: auto;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.input, .nextButton {
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 4% 2%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    font-size: 16px;
+}
+
+.nextButton {
+    background-color: #002f34;
+    color: white;
+    border-radius: 4px;
+    border: 5px solid #002f34;
+    font-weight: bold;
+}
+
+.nextButton:hover {
+    background-color: white;
+    color: #002f34;
+    cursor: pointer;
+}
+
+.nextButton:disabled {
+    background-color: #d8dfe0;
+    color: #7f9799;
+    border-color: #d8dfe0;
+}
+
+.nextButton:disabled:hover {
+    cursor: not-allowed;
+}
+
+.yellow {
+    background-color: #fefbf0;
+    font-size: 14px;
+    padding: 5%;
+}
+
+.font {
+    font-size: 12px;
+}
+
+.bold {
+    color: #002f34;
+    font-size: 20px;
+    font-weight: 700;
+}
