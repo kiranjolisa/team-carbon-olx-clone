@@ -12,7 +12,7 @@ const Routes = () => {
         <Route exact path = '/post'>
             <PostAd />
         </Route>
-        <Route path = '/post/attributes'>
+        <Route exact path = '/post/attributes'>
             <AttributeForm/>
         </Route>
         <Route>

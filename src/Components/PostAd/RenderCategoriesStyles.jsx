@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const BorderBox = styled.div`
 border: 1px solid rgba(0,47,52,.2);
 border-radius: 4px;
-width : 60vw;
+width : 40vw;
 margin-bottom : 10vh;`
 
 export const SubHeader = styled.h3`
@@ -18,7 +18,7 @@ font-weight: 700;
 color: #002f34;`
 
 export const CategoriesList = styled.ul`
-width: 50%;
+width: 100%;
 margin-left: auto;
 left: auto;
 right: auto;
@@ -53,10 +53,6 @@ border-bottom : 1px solid rgba(0,47,52,.2);
     color: #002f34;
     background-color: rgba(0,47,52,.2);
 }
-&:active{
-    color: #002f34;
-    background-color: rgba(0,47,52,.2);
-}
 `
 
 export const ItemName = styled.span`
@@ -70,6 +66,9 @@ color: rgba(0,47,52,.64);
 &:hover{
     color: #002f34;
 }`
+
+export const ArrowSpan = styled.span`
+margin-left : auto;`
 
 export const Categories = [
     {

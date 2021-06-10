@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BorderBox, Categories, CategoriesList, CategoryItems, ItemName, PostAttributeLink, SubHeader } from "./RenderCategoriesStyles";
+import { ArrowSpan, BorderBox, Categories, CategoriesList, CategoryItems, PostAttributeLink, SubHeader } from "./RenderCategoriesStyles";
 import { ReactComponent as OlxAuto } from '../../Assets/olxAuto.svg'
 import { ReactComponent as PropertiesIcon } from '../../Assets/propertiesIcon.svg'
 import { ReactComponent as MobilesIcon } from '../../Assets/mobilesIcon.svg'
@@ -14,13 +14,18 @@ import { ReactComponent as BooksIcon } from '../../Assets/booksIcon.svg'
 import { ReactComponent as PetsIcon } from '../../Assets/petsIcon.svg'
 import { ReactComponent as ServicesIcon } from '../../Assets/servicesIcon.svg'
 import { ReactComponent as RightArrow } from '../../Assets/rightArrowPost.svg'
+import { useDispatch } from "react-redux";
+import { setMainCategory } from "../../Redux/MainCategory/action";
 
 export const RenderCategories = () => {
+    const dispatch = useDispatch();
+
+    const updateCategory = (category) => dispatch(setMainCategory(category))
     return (
         <BorderBox>
             <SubHeader>CHOOSE A CATEGORY</SubHeader>
             <CategoriesList>
-                {Categories.map((item, i) => <CategoryItems>
+                {Categories.map((item, i) => <CategoryItems onClick = {() => updateCategory(item.title)}>
                    {
                    i === 0? <OlxAuto />:
                    i === 1 ? <PropertiesIcon />:
@@ -36,13 +41,9 @@ export const RenderCategories = () => {
                    i === 11 ? <ServicesIcon/>:
                    null
                     }
-                    <ItemName>{item.title}</ItemName>
-                    <RightArrow />
-                </CategoryItems>)}
-            </CategoriesList>
-            <CategoriesList>
-                {Categories.map((item) => item.subCategories.map(item => <CategoryItems>
-                    <PostAttributeLink to = '/post/attributes'>{item}</PostAttributeLink></CategoryItems>))}
+                    <PostAttributeLink to='/post/attributes'>{item.title}</PostAttributeLink>
+                    <ArrowSpan><RightArrow /></ArrowSpan>
+                    </CategoryItems>)}
             </CategoriesList>
         </BorderBox>
     );
