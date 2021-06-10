@@ -5,10 +5,12 @@ import {Wrapper} from "../../Components/styles"
 
 export const HouseCard = ({image, price, address, postDate, bedrooms, bathrooms, carParking}) => {
     return (
-        <Wrapper>
+        // <Wrapper>
             <CardWrapper>
                 <div>
+                    <div></div>
                     <img src= {image} alt= {image} />
+                    <div></div>
                     <button><FiHeart/></button>
                 </div>
                 <div>
@@ -21,6 +23,6 @@ export const HouseCard = ({image, price, address, postDate, bedrooms, bathrooms,
                     <p> {postDate}</p>
                 </div>       
             </CardWrapper>
-        </Wrapper>
+        // </Wrapper>
     )
 }

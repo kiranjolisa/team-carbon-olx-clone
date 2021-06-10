@@ -229,15 +229,23 @@ export const CardWrapper = styled.div`
     text-align: left;
     margin: 1%;
     cursor: pointer;
+    flex-basis: 22%;
 
     div:nth-child(1) {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+    }
+
+    div:nth-child(1) > div {
+        flex-grow: 1;
     }
 
     div:nth-child(1) > img{
         height: 20vh;
-        margin: 3% 0 2% 20%;
+        // margin: 3% 0 2% 20%;
+        margin-top: 2%;
+        max-width: 85%;
     }
 
     div:nth-child(1) > button {
@@ -276,8 +284,11 @@ export const CardWrapper = styled.div`
     div:nth-child(3) {
         display: flex;
         flex-direction: row;
-        margin-left: 5%;
-        gap: 87%;
+        justify-content: space-between;
+        padding-left: 2%;
+        padding-right: 2%;
+        // margin-left: 5%;
+        // gap: 87%;
         font-size: 12px;
     }
 
