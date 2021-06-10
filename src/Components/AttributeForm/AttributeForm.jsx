@@ -1,11 +1,18 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
 
 import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
-import { indianStates ,MainDiv, Header, HeaderDiv, FormContainer, DetailsCategory, InputWrapper, Input, Label, FormSpan, TextArea, Select, Option, ImageWrapper, PostButton, FileInput, FileAlign, FileLabel, Categories } from './AttributeFormStyles';
-import { useState } from 'react';
+import { MainDiv, Header, HeaderDiv, FormContainer, DetailsCategory, InputWrapper,
+     Input, Label, FormSpan, TextArea, Select, Option, ImageWrapper, PostButton, 
+     FileInput, FileAlign, FileLabel} from './AttributeFormStyles';
+import { Categories,indianStates } from "./AttributeFormElements"
 import avatar from '../../Assets/avatar.png'
 import camera  from '../../Assets/camera.svg'
-import { useSelector } from 'react-redux';
+
+import { storage } from "../../Utils/Firebase/index"
+import { postAd } from "../../Redux/PostData/action"
+import { Redirect } from 'react-router';
 
 const initState = {
     title :"",
@@ -15,14 +22,18 @@ const initState = {
     defaultName : "Masai School",
     imageUrls  : [],
     mainCategory : "",
-    subCategory : ""
+    subCategory : "",
+    featured : false
 }
 export const AttributeForm = () => {
     const [ form, setForm ] = useState(initState);
     const [ imgLoc, setImgLoc ] = useState(new Array(20).fill(null));
-    const [ index, setIndex ] = useState(0)
+    const [ index, setIndex ] = useState(0);
+    const [ isUploading, setUploading ] = useState(false);
     const mainCategoryReduxStore = useSelector(state => state.category.mainCategory);
     const {title, description, price, state, defaultName, mainCategory, subCategory} = form;
+    const dispatch = useDispatch();
+    const postingAdSuccess = useSelector(state => state.postAd.postingAdSuccess)
 
     const handleChange = (e) => {
         console.log(mainCategoryReduxStore)
@@ -34,12 +45,39 @@ export const AttributeForm = () => {
     }
 
     const handleImageUpdates = (e) => {
+        setUploading(true)
         const updatedArray = imgLoc;
-        updatedArray[index] = e.target.files[0]
-        setImgLoc(updatedArray)
-        setIndex(prev => prev + 1)
+        const image = e.target.files[0];
+        const uploadTask = storage.ref(`images/${image.name}`).put(image)
+        uploadTask.on('state_changed', 
+        (snapshot)=> {
+            console.log(snapshot)
+        }, 
+        (error) => {
+            console.log(error)
+            setUploading(false)
+            alert('Image upload failed, please retry')},
+        () => {
+          storage.ref('images').child(image.name).getDownloadURL().then(url =>{
+            setUploading(false);
+            updatedArray[index] = url;
+            setImgLoc(updatedArray)
+            setIndex(prev => prev + 1)
+            })
+        })
     }
-    return<>
+
+    const postAdToServer = () => {
+        const onlyImageArray = imgLoc.filter(item => item === null ? false : true);
+        const payload = {
+            ...form,
+            imageUrls : [...onlyImageArray],
+            adPostDate : new Date().toLocaleDateString()
+        }
+        dispatch(postAd(payload))
+    }
+
+    return postingAdSuccess ?<Redirect to = '/post/success'/> :<>
     <Navbar/>
     <MainDiv>
     <Header>POST YOUR AD</Header>
@@ -56,7 +94,7 @@ export const AttributeForm = () => {
             name = "mainCategory"
             value = {mainCategory} 
             onChange = {handleChange} >
-                {Categories.map((item) => <Option>{item.title}</Option>)}
+                {Categories.map((item, i) => <Option key = {i}>{item.title}</Option>)}
             </Select>
             </InputWrapper>
             <InputWrapper>
@@ -68,7 +106,7 @@ export const AttributeForm = () => {
             value = {subCategory} 
             onChange = {handleChange} >
                 {Categories.filter(item => item.title === mainCategory? true : false).map(itemNext => {
-                    return itemNext.subCategories.map(itemFinal =><option> {itemFinal} </option>)
+                    return itemNext.subCategories.map((itemFinal, i) =><option key = {i}> {itemFinal} </option>)
                 })}
             </Select>
             </InputWrapper>
@@ -128,9 +166,10 @@ export const AttributeForm = () => {
             <Header>UPLOAD UP TO 20 PHOTOS</Header>
             </HeaderDiv>
             <InputWrapper>
+            {isUploading?<FormSpan>UPLOADING IMAGE...</FormSpan>:null}
             <FileAlign>
-                {imgLoc.map((item,i) => <FileLabel><FileInput style = {{
-                    backgroundImage :  `url(${item === null ?camera : URL.createObjectURL(item)})`,
+                {imgLoc.map((item,i) => <FileLabel key = {i}><FileInput style = {{
+                    backgroundImage :  `url(${item === null ?camera : item})`,
                     backgroundRepeat : 'no-repeat',
                     backgroundPosition: "center",
                     backgroundSize: "80px 80px"
@@ -153,7 +192,7 @@ export const AttributeForm = () => {
             name = "state"
             value = {state} 
             onChange = {handleChange} >
-                {indianStates.map(item => <Option>{item}</Option>)}
+                {indianStates.map((item,i) => <Option key = {i}>{item}</Option>)}
             </Select>
             </InputWrapper>
             </DetailsCategory>
@@ -185,11 +224,11 @@ export const AttributeForm = () => {
             </DetailsCategory>
             <DetailsCategory>
                 <InputWrapper>
-                <PostButton 
+                <PostButton
+                onClick = {() => postAdToServer()} 
                 disabled = {
-                    (
-                       subCategory.length === 0|| mainCategory.length === 0|| title.length === 0 || 
-                       description.length === 0 ||price.length === 0 || state.length === 0) ? true : false 
+                    (subCategory.length === 0|| mainCategory.length === 0|| title.length === 0 || 
+                    description.length === 0 ||price.length === 0 || state.length === 0) ? true : false 
                 }
                 >Post now</PostButton>
                 </InputWrapper>

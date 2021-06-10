@@ -1,9 +1,11 @@
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import { reducer as categoryReducer } from "./MainCategory/reducer";
+import { reducer as postAdReducer } from "./PostData/reducer";
 import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({
-    category : categoryReducer
+    category : categoryReducer,
+    postAd : postAdReducer
 })
 
 export const store = createStore(rootReducer, 
