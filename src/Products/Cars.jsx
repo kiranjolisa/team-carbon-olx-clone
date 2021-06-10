@@ -20,7 +20,7 @@ export const Cars = () => {
     return isLoading ? (
         <LoadingIndicator/>
     ) : (
-        <div>
+        <div style={{border: "2px solid red", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
             {products.map((item) => {
                 return <VehicleCard {...item} />
             })}
