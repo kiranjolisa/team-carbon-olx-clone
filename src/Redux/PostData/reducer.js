@@ -1,4 +1,4 @@
-import { POST_AD_FAILURE, POST_AD_REQUEST, POST_AD_SUCCESS } from "./actionTypes"
+import { POST_AD_FAILURE, POST_AD_REQUEST, POST_AD_SUCCESS, UNSET_SUCCESS_STATUS } from "./actionTypes"
 
 const initState = {
     postingAd : false,
@@ -24,6 +24,12 @@ export const reducer = ( state = initState, { type }) => {
             return{
                 ...state,
                 postingAd : false,
+                postingAdSuccess : false
+            }
+
+        case UNSET_SUCCESS_STATUS:
+            return{
+                ...state,
                 postingAdSuccess : false
             }
         default :
