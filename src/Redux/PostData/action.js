@@ -1,0 +1,18 @@
+import axios from "axios";
+
+import { POST_AD_FAILURE, POST_AD_REQUEST, POST_AD_SUCCESS } from "./actionTypes";
+
+export const postAd = (payload) => (dispatch) => {
+        console.log(payload);
+        axios.post('http://localhost:3001/adsPosted', payload)
+        .then(res => {
+            dispatch(postAdSuccess())
+        })
+        .catch(err => {
+            console.log(err)
+            dispatch(postAdFailure())
+        })
+}
+export const postAdRequest = () => ({type : POST_AD_REQUEST})
+export const postAdSuccess = () => ({type : POST_AD_SUCCESS})
+export const postAdFailure = () => ({type : POST_AD_FAILURE})
