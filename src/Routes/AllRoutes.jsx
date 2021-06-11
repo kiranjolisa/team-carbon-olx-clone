@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css';
 import { Route, Switch } from 'react-router'
 import {Cars} from "../Products/Cars"
 import {Motorcycles} from "../Products/Motorcycles"
@@ -9,38 +10,92 @@ import {HouseForRent} from "../Products/HouseForRent"
 import { HouseForSale } from '../Products/HouseForSale'
 import { NavbarRoutes } from '../Components/NavbarRoutes'
 import { Footer } from '../Components/Footer'
+import { Home } from '../Components/Home'
+import { Navbar } from '../Components/Navbar';
+import { PostAd } from "../Components/PostAd/PostAd";
+import { PostSuccess } from "../Components/PostAdSuccess/PostSuccess";
+import { AttributeForm } from "../Components/AttributeForm/AttributeForm";
 
 export const AllRoutes = () => {
     return (
         <div>
-            <NavbarRoutes/>
             <Switch>
-                <Route path = "/cars">
-                    <Cars/>
-                </Route>
-                <Route path = "/motorcycles">
-                    <Motorcycles/>
-                </Route>
-                <Route path = "/mobile">
-                    <Mobilephones/>
-                </Route>
-                <Route path = "/saleHouse">
-                    <HouseForSale/>
-                </Route>
-                <Route path = "/scooters">
-                    <Scooters/>
-                </Route>
-                <Route path = "/commerical">
-                    <Commerical/>
-                </Route>
-                <Route path = "/rentHouse">
-                    <HouseForRent/>
-                </Route>
-                <Route>
-                    <h3>something went wrong</h3>
-                </Route>
+            <Route exact path='/'>
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Home/>
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/cars">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Cars />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/motorcycles">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Motorcycles />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/mobile">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Mobilephones />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/saleHouse">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <HouseForSale />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/scooters">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Scooters />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/commerical">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Commerical />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/rentHouse">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <HouseForRent />
+                    <Footer /></div>
+            </Route>
+            <Route exact path='/post'>
+                <PostAd />
+            </Route>
+            <Route exact path='/post/attributes'>
+                <AttributeForm />
+            </Route>
+            <Route exact path='/post/success'>
+                <PostSuccess />
+            </Route>
+            <Route>
+                <h3>something went wrong</h3>
+            </Route>
             </Switch>
-            <Footer/>
         </div>
     )
 }

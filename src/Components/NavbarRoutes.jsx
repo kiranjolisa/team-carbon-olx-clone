@@ -8,6 +8,7 @@ export const NavbarRoutes = () => {
         <RoutesNavbarWrapper>
             <div><span>ALL CATEGORIES <RiArrowDownSLine /> </span> </div>
             <div>
+                <Link to = "/" ></Link>
                 <Link to = "/cars" >Cars</Link>
                 <Link to = "/motorcycles">Motorcycles</Link>
                 <Link to = "/mobile" >Mobile Phones</Link>
