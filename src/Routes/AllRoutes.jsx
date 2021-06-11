@@ -93,7 +93,7 @@ export const AllRoutes = () => {
             <Route exact path='/post/success'>
                 <PostSuccess />
             </Route>
-            <Route path = '/item/:id'>
+            <Route path = '/item/:category/:id'>
                 <DynamicCardContents />
             </Route>
             <Route>

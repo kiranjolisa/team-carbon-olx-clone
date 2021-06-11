@@ -312,3 +312,7 @@ text-decoration : none;
 color: black;
 font-size : 1.2em;
 margin : auto;`
+
+export const CardLinkWrap = styled(Link)`
+text-decoration : none;
+color : inherit;`
