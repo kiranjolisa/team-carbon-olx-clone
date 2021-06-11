@@ -1,22 +1,18 @@
-import { applyMiddleware, combineReducers, compose, createStore } from "redux";
-import thunk from "redux-thunk";
+import { createStore, applyMiddleware, compose, combineReducers } from "redux";
+import { reducer as categoryReducer } from "./MainCategory/reducer";
+import { reducer as postAdReducer } from "./PostData/reducer";
 import { getDataReducer } from "./products/reducer";
-
-const thunkMiddleware = (store) => (next) => (action) => {
-  return typeof action === "function"
-    ? action(store.dispatch, store.getState)
-    : next(action);
-};
+import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({
- products : getDataReducer
-});
+    category : categoryReducer,
+    postAd : postAdReducer,
+    products : getDataReducer
+})
 
-const composeEnhancers =
-  (typeof window !== "undefined" &&
-    window.__REDUX__DEVTOOLS_EXTENSION_COMPOSE__) ||
-  compose;
+export const store = createStore(rootReducer, 
+    compose(applyMiddleware(thunk), 
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()))
 
-const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-export const store = createStore(rootReducer, enhancer);
+

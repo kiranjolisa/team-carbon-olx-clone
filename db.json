@@ -1,0 +1,53 @@
+{
+  "adsPosted": [
+    {
+      "title": "5 cent land for sale near commercial street bangalore",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "price": "2000000",
+      "state": "Karnataka",
+      "defaultName": "Masai School",
+      "imageUrls": [
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2F6yRGsLy.jpg?alt=media&token=b4f9fbc7-1d77-4ec5-b7d7-227c8062a52a",
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2FNfOr1Zc.png?alt=media&token=29453ee2-0ff0-460f-ba31-829e414e7f6d"
+      ],
+      "mainCategory": "Properties",
+      "subCategory": "Lands & Plots",
+      "featured": false,
+      "adPostDate": "6/10/2021",
+      "id": 1
+    },
+    {
+      "title": "Chef for a rest",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "price": "1670039",
+      "state": "Jammu & Kashmir",
+      "defaultName": "Masai School",
+      "imageUrls": [
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Fdownload.png?alt=media&token=8ba13f5b-48ed-400b-85b4-6d4f8d41d33b",
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Fnewplot.png?alt=media&token=8f0a0815-2671-4d02-9488-867f2a33758a"
+      ],
+      "mainCategory": "Jobs",
+      "subCategory": "Cook",
+      "featured": false,
+      "adPostDate": "6/10/2021",
+      "id": 2
+    },
+    {
+      "title": "Fitness training",
+      "description": "lorkklsdkf;olkfeol k ikop; weowperipo[waeri[wpe w[pe r\nrfasaekle;lkwerwaeporawepop[fkklbmfdlkogo\n  e asweofrawepoklrp[wep[werew",
+      "price": "1200",
+      "state": "Assam",
+      "defaultName": "Masai School",
+      "imageUrls": [
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2F5847f98fcef1014c0b5e48c0.png?alt=media&token=70971648-5494-41b3-b993-049a65fa0fff",
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Ftransip-stack.png?alt=media&token=4beb1ea5-1306-4259-956a-c00c80ed856f",
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Fnewplot.png?alt=media&token=f1b5b1e6-c34f-4a10-b2b3-caebfb8530fa"
+      ],
+      "mainCategory": "Books, Sports & Hobbies",
+      "subCategory": "Gym & Fitness",
+      "featured": false,
+      "adPostDate": "6/10/2021",
+      "id": 3
+    }
+  ]
+}

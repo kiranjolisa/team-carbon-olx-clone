@@ -1,0 +1,1 @@
+export const SET_MAIN_CATEGORY = "SET_MAIN_CATEGORY";
