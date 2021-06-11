@@ -31,6 +31,38 @@
       "featured": false,
       "adPostDate": "6/10/2021",
       "id": 2
+    },
+    {
+      "title": "Mi note 9 pro",
+      "description": "lorem ipsum blah nblah blah /....",
+      "price": "2113123",
+      "state": "The Government of NCT of Delhi",
+      "defaultName": "Masai School",
+      "imageUrls": [
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Fillustration-error.webp?alt=media&token=110b99e3-06a7-479a-b439-4a381f731df1",
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Fnotifications.webp?alt=media&token=2a8c8b1d-3d48-49c2-a6d1-c4fe4eab81e8"
+      ],
+      "mainCategory": "Mobiles",
+      "subCategory": "Mobile Phones",
+      "featured": false,
+      "adPostDate": "6/10/2021",
+      "id": 3
+    },
+    {
+      "title": "Sofa set for sale",
+      "description": "dfkgopertoperit904pod lorem ipsum de color",
+      "price": "100000",
+      "state": "Kerala",
+      "defaultName": "Masai School",
+      "imageUrls": [
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Ffirst_1.jpg?alt=media&token=ffa5c4a4-c26c-46b3-95ca-b0763d581f2e",
+        "https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/images%2Ffirst_1.jpg?alt=media&token=5ebd996e-d75f-41ed-bb2b-a406b30273cf"
+      ],
+      "mainCategory": "Furniture",
+      "subCategory": "Beds & Wardrobes",
+      "featured": false,
+      "adPostDate": "6/11/2021",
+      "id": 4
     }
   ]
 }
