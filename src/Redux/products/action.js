@@ -5,6 +5,9 @@ import { GET_CARS_FAILURE,
         GET_COMMERICAL_FAILURE, 
         GET_COMMERICAL_REQUEST, 
         GET_COMMERICAL_SUCCESS, 
+        GET_FRESH_RECOMMENDATION_FAILURE, 
+        GET_FRESH_RECOMMENDATION_REQUEST, 
+        GET_FRESH_RECOMMENDATION_SUCCESS, 
         GET_MOBILE_FAILURE, 
         GET_MOBILE_REQUEST, 
         GET_MOBILE_SUCCESS, 
@@ -248,5 +251,37 @@ export const getRentHouseData = payload => dispatch => {
     })
     .catch(err => {
         dispatch(getRentHouseFailure())
+    })
+}
+
+// Fresh Recommedation action
+
+export const getFreshRecommendationRequest = () => {
+    return {
+        type : GET_FRESH_RECOMMENDATION_REQUEST
+    }
+}
+
+export const getFreshRecommendationSuccess = (payload) => {
+    return {
+        type : GET_FRESH_RECOMMENDATION_SUCCESS,
+        payload
+    }
+}
+
+export const getFreshRecommendationFailure = () => {
+    return {
+        type : GET_FRESH_RECOMMENDATION_FAILURE
+    }
+}
+
+export const getFreshRecommendationData = payload => dispatch => {
+    dispatch(getFreshRecommendationRequest())
+    axios.get("https://json-server-olx.herokuapp.com/freshRecommendation")
+    .then(res => {
+        dispatch(getFreshRecommendationSuccess(res.data))
+    })
+    .catch(err => {
+        dispatch(getFreshRecommendationFailure())
     })
 }
