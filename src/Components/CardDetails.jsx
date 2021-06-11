@@ -22,8 +22,8 @@ function CardDetails(){
                 <div style={{display: "flex", justifyContent: "space-around", alignItems: "center"}}>
                     <div style={{flexBasis: "50%", textAlign: "left"}}> <h3>{"{price}"}</h3> </div>
                     <div style={{flexGrow: "1"}}></div>
-                    <div style={{flexBasis: "8%"}}><ShareAltOutlined /></div>
-                    <div style={{flexBasis: "8%"}}><HeartOutlined /></div>
+                    <div className={styles.hover} style={{flexBasis: "8%"}}><ShareAltOutlined /></div>
+                    <div className={styles.hover} style={{flexBasis: "8%"}}><HeartOutlined /></div>
                 </div>
                 <div style={{textAlign: "left"}}>{"{year}"} - {"{distance   }"}</div>
                 <div className={styles.left_right}>

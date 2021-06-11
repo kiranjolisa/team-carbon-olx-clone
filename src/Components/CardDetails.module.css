@@ -77,3 +77,7 @@
 .left_right > div:nth-child(2) {
     flex-grow: 1;
 }
+
+.hover {
+    cursor: pointer;
+}
