@@ -1,12 +1,9 @@
 import styled from "styled-components"
-<<<<<<< HEAD
+
 import { Link } from "react-router-dom"
-=======
-import { Link } from "react-router-dom";
->>>>>>> 7284fd4bd1705226cabe590806bea74635808933
+
 
 export const NavbarWrapper = styled.div`
-
     display: flex;
     flex-direction: row;
     padding: 0.5%;
@@ -323,32 +320,28 @@ export const CardWrapper = styled.div`
         font-size: 12px;
     }
 `
+// export const SellButton = styled.div`
+// box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// border-radius:20px; 
+// height : 40px; 
+// width : 100px;
+// margin : auto;
+// border-top : 4px solid #23e5db;
+// border-left : 4px solid #ffce32;
+// border-right : 4px solid #3a77ff;
+// border-bottom : 4px solid #ffce32;
+// display : flex;
+// justify-content : center;`
 
-<<<<<<< HEAD
-export const SellButton = styled.div`
-box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-border-radius:20px; 
-height : 40px; 
-width : 100px;
-margin : auto;
-border-top : 4px solid #23e5db;
-border-left : 4px solid #ffce32;
-border-right : 4px solid #3a77ff;
-border-bottom : 4px solid #ffce32;
-display : flex;
-justify-content : center;`
-
-export const StyledLink = styled(Link)`
-text-decoration : none;
-color: black;
-font-size : 1.2em;
-margin : auto;`
+// export const StyledLink = styled(Link)`
+// text-decoration : none;
+// color: black;
+// font-size : 1.2em;
+// margin : auto;`
 
 export const CardLinkWrap = styled(Link)`
 text-decoration : none;
 color : inherit;`
-=======
-`
 
 export const LoadMore = styled.div`
     button {
@@ -366,4 +359,3 @@ export const LoadMore = styled.div`
     }
 
 `
->>>>>>> 7284fd4bd1705226cabe590806bea74635808933

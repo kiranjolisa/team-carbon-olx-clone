@@ -7,6 +7,7 @@ import { getDynamicData } from "../../Redux/GetDynamicData/action";
 import { NavbarRoutes } from '../NavbarRoutes'
 import { Footer } from '../Footer'
 import { Navbar } from '../Navbar';
+import CardDetails from "../CardDetails";
 
 export const DynamicCardContents = () => {
     const { category, id} = useParams()
@@ -19,11 +20,12 @@ export const DynamicCardContents = () => {
     console.log(content.length === 0 ? " " : content[0])
     return <>
      <Navbar/>
-    <NavbarRoutes />           
-    <h1>Dynamic Contents Fetched!</h1>
+    <NavbarRoutes />  
+    <CardDetails  { ...content[0]}/>         
+    {/* <h1>Dynamic Contents Fetched!</h1>
     <h3>{content.length === 0 ? null:content[0].category}</h3>
     <h3>{content.length === 0 ? null:content[0].id}</h3>
-    <h3>{content.length === 0 ? null:content[0].description}</h3>
+    <h3>{content.length === 0 ? null:content[0].description}</h3> */}
     <Footer />
     </>
 }

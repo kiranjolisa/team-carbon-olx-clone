@@ -6,7 +6,6 @@ import {FiSearch} from "react-icons/fi"
 import {RiArrowDownSLine} from "react-icons/ri"
 import olxPostLogo from '../Assets/olxPostLogo.svg';
 import { indianStates } from './AttributeForm/AttributeFormElements'
-import { SellButton, StyledLink } from './styles'
 
 export const Navbar = () => {
     return (
