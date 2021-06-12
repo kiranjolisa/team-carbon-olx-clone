@@ -4,10 +4,9 @@ import { NavbarWrapper, SellButton, StyledLink } from './styles'
 import { Link } from "react-router-dom";
 import {FiSearch} from "react-icons/fi"
 import {RiArrowDownSLine} from "react-icons/ri"
-
-// import { SellButton, StyledLink } from './LandingPage/StyledElements'
 import olxPostLogo from '../Assets/olxPostLogo.svg';
-
+import { indianStates } from './AttributeForm/AttributeFormElements'
+import { SellButton, StyledLink } from './styles'
 
 export const Navbar = () => {
     return (
@@ -18,7 +17,7 @@ export const Navbar = () => {
             <div>
                 <select>
                     <option value="">SELECT</option>
-                    {["Assam", "Uttar Pradesh", "West Bengal"].map((item, i) => (
+                    {indianStates.map((item, i) => (
                         <option key = {i} value = {item} >
                             {item}
                         </option>
@@ -37,11 +36,9 @@ export const Navbar = () => {
             <div>
                 <button>Login</button>
             </div>
-            <div style = {{marginLeft:"20px"}}>
-            <SellButton>
-            <StyledLink to = '/post'>+ SELL</StyledLink>
-            </SellButton>
-            </div>
+                <SellButton>
+                    <StyledLink to = '/post'>+ SELL</StyledLink>
+                </SellButton>
         </NavbarWrapper>
     )
 }

@@ -26,11 +26,11 @@ const initState = {
     featured : false
 }
 export const AttributeForm = () => {
-    const [ form, setForm ] = useState(initState);
+    const mainCategoryReduxStore = useSelector(state => state.category.mainCategory);
+    const [ form, setForm ] = useState({...initState, mainCategory : mainCategoryReduxStore});
     const [ imgLoc, setImgLoc ] = useState(new Array(20).fill(null));
     const [ index, setIndex ] = useState(0);
     const [ isUploading, setUploading ] = useState(false);
-    const mainCategoryReduxStore = useSelector(state => state.category.mainCategory);
     const {title, description, price, state, defaultName, mainCategory, subCategory} = form;
     const dispatch = useDispatch();
     const postingAdSuccess = useSelector(state => state.postAd.postingAdSuccess)

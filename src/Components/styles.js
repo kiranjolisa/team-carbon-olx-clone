@@ -1,5 +1,9 @@
 import styled from "styled-components"
+<<<<<<< HEAD
 import { Link } from "react-router-dom"
+=======
+import { Link } from "react-router-dom";
+>>>>>>> 7284fd4bd1705226cabe590806bea74635808933
 
 export const NavbarWrapper = styled.div`
 
@@ -13,6 +17,7 @@ export const NavbarWrapper = styled.div`
      margin-right: 0.5%;
      height: 6vh;
      background: #F7F8F9;
+     cursor: pointer;
     }
 
     select {
@@ -20,6 +25,9 @@ export const NavbarWrapper = styled.div`
         border-radius: 3px;
         height: 6vh;
         width: 260px;
+        padding-left: 1%;
+        font-size: 17px;
+        cursor: pointer;
     }
 
     select:hover {
@@ -57,6 +65,7 @@ export const NavbarWrapper = styled.div`
         font-size: 15px;
         color: #002F34;
         font-weight: 700;
+        cursor: pointer;
     }
 
     div:nth-child(6) >button {
@@ -86,6 +95,34 @@ export const NavbarWrapper = styled.div`
         font-size: 20px;
         cursor: pointer;
     }
+`
+
+export const SellButton = styled.div`
+    box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius:20px; 
+    height : 40px; 
+    width : 100px;
+    margin : auto;
+    border-top : 4px solid #23e5db;
+    border-left : 4px solid #ffce32;
+    border-right : 4px solid #3a77ff;
+    border-bottom : 4px solid #ffce32;
+    display : flex;
+    justify-content : center;
+`
+
+export const StyledLink = styled(Link)`
+    text-decoration : none;
+    color: black;
+    font-size : 1.2em;
+    margin : auto;
+`
+
+export const ContainerDiv = styled.div`
+    display : flex;
+    justify-content : center;
+    height : 100vh;
+    width : 100vw;
 `
 
 export const RoutesNavbarWrapper = styled.div`
@@ -219,16 +256,12 @@ export const LoadingWrapper = styled.div`
         }
     }
 `
-export const Wrapper = styled.div`
-    /* display: flex; */
-    
-`
 
 export const CardWrapper = styled.div`
     border: 1px solid #CCD5D6;
     border-radius: 5px;
     text-align: left;
-    margin: 1%;
+    margin: 0.5%;
     cursor: pointer;
     flex-basis: 22%;
 
@@ -244,7 +277,6 @@ export const CardWrapper = styled.div`
 
     div:nth-child(1) > img{
         height: 20vh;
-        // margin: 3% 0 2% 20%;
         margin-top: 2%;
         max-width: 85%;
     }
@@ -288,12 +320,11 @@ export const CardWrapper = styled.div`
         justify-content: space-between;
         padding-left: 2%;
         padding-right: 2%;
-        // margin-left: 5%;
-        // gap: 87%;
         font-size: 12px;
     }
 `
 
+<<<<<<< HEAD
 export const SellButton = styled.div`
 box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border-radius:20px; 
@@ -316,3 +347,23 @@ margin : auto;`
 export const CardLinkWrap = styled(Link)`
 text-decoration : none;
 color : inherit;`
+=======
+`
+
+export const LoadMore = styled.div`
+    button {
+        border: 2px solid #002F34;
+        border-radius: 3px;
+        padding: 1%;
+        font-size: 17px;
+        color: #002F34;
+    }
+
+    button:hover {
+        border: 4px solid #002F34;
+        color: #002F34;
+        padding: 0.9%;
+    }
+
+`
+>>>>>>> 7284fd4bd1705226cabe590806bea74635808933

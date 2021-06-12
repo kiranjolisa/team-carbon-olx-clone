@@ -1,31 +1,33 @@
 import React from 'react'
+
 import { Route, Switch } from 'react-router-dom'
 
 import '../App.css';
-
-import { Cars } from "../Products/Cars"
-import { Motorcycles } from "../Products/Motorcycles"
-import { Mobilephones } from "../Products/Mobilephones"
-import { Scooters } from "../Products/Scooters"
-import { Commerical } from "../Products/Commerical"
-import { HouseForRent } from "../Products/HouseForRent"
+import { Route, Switch } from 'react-router'
+import {Cars} from "../Products/Cars"
+import {Motorcycles} from "../Products/Motorcycles"
+import {Mobilephones} from "../Products/Mobilephones"
+import {Scooters} from "../Products/Scooters"
+import {Commerical} from "../Products/Commerical"
+import {HouseForRent} from "../Products/HouseForRent"
 import { HouseForSale } from '../Products/HouseForSale'
 import { NavbarRoutes } from '../Components/NavbarRoutes'
 import { Footer } from '../Components/Footer'
+import { Home } from '../Components/Home'
 import { Navbar } from '../Components/Navbar';
 import { PostAd } from "../Components/PostAd/PostAd";
 import { PostSuccess } from "../Components/PostAdSuccess/PostSuccess";
 import { AttributeForm } from "../Components/AttributeForm/AttributeForm";
 import { DynamicCardContents } from '../Components/DynamicCardContents/DynamicCardContents';
 
-
 export const AllRoutes = () => {
     return (
-        <Switch>
+            <Switch>
             <Route exact path='/'>
                 <div className="App">
                     <Navbar />
                     <NavbarRoutes />
+                    <Home/>
                     <Footer />
                 </div>
             </Route>
