@@ -4,7 +4,7 @@ import { POST_AD_FAILURE, POST_AD_REQUEST, POST_AD_SUCCESS, UNSET_SUCCESS_STATUS
 
 export const postAd = (payload) => (dispatch) => {
         console.log(payload);
-        axios.post('http://localhost:3001/adsPosted', payload)
+        axios.post('https://json-server-olx.herokuapp.com/postAd', payload)
         .then(res => {
             dispatch(postAdSuccess())
         })

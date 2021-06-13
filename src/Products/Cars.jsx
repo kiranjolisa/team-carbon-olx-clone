@@ -13,7 +13,7 @@ export const Cars = () => {
 
     React.useEffect(() => {
         showData()
-    }, [dispatch])
+    }, [])
     
     const showData = () => {
         dispatch(getCarsData())
@@ -27,7 +27,7 @@ export const Cars = () => {
         <LoadingIndicator/>
     ) : (
         <div>
-            <div style={{border: "2px solid red", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
+            <div style={{border: "2px solid white", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
                 {products.slice(0, visible).map((item) => {
                     return <VehicleCard {...item} />
                 })}

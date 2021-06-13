@@ -1,11 +1,8 @@
 import { MobileOutlined, FacebookOutlined, GoogleOutlined, CloseOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import styles from "./Authentication.module.css";
-import { auth } from "../firebase.js";
-import { Carousel } from 'react-bootstrap';
-import first from "../images/first.jpg";
-import second from "../images/second.jpg";
-import third from "../images/third.jpg";
+import { auth } from "../firebase";
+import first from "../Assets/first.jpg";
 
 function Authentication() {
 
@@ -36,47 +33,12 @@ function Authentication() {
             </div>
 
             {
-                !emailFlag && <><div style={{ border: "2px solid red", width: "90%", margin: "auto" }}>
-                    carousel
-
-                    {/* carousel */}
-
-                    {/* <Carousel fade={true} pause={true}>
-                        <Carousel.Item interval={2000}>
-                            <img
-                                className="d-block w-100"
-                                src={first}
-                                alt="First slide"
-                            />
-                            <Carousel.Caption>
-                                Help make OLX safer place to buy and sell
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item interval={2000}>
-                            <img style={{width: "50px"}}
-                                className="d-block w-100"
-                                src={second}
-                                alt="Third slide"
-                            />
-                            <Carousel.Caption>
-                                second
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item interval={2000}>
-                            <img style={{width: "50px"}}
-                                className="d-block w-100"
-                                src={third}
-                                alt="Third slide"
-                            />
-                            <Carousel.Caption>
-                                third
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel> */}
-
-
-                    {/* carousel */}
-
+                !emailFlag && <><div style={{ border: "2px solid white", width: "90%", margin: "auto" }}>
+                <div>
+                    <img style = {{height: "100px"}} className="d-block w-100" src={first} alt="First slide"/>
+                    <p>Help make OLX safer place to buy and <br /> sell</p>
+                </div>
+                
                 </div>
 
                     <div className={styles.flexButton}>
@@ -118,9 +80,6 @@ function Authentication() {
                     <div className={`${styles.box} ${styles.font} ${styles.silver}`}>We won't reveal your email to anyone else nor use it to send you spam</div>
                 </>
             }
-
-
-
         </div>
     )
 }

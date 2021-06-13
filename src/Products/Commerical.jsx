@@ -26,7 +26,7 @@ export const Commerical = () => {
         <LoadingIndicator/>
     ) : (
         <div>
-        <div style={{border: "2px solid red", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
+        <div style={{border: "2px solid white", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
             {products.slice(0, visible).map((item) => {
                 return <VehicleCard {...item} />
             })}

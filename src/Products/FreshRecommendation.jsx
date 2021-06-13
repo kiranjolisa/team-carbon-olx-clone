@@ -8,7 +8,7 @@ import { LoadMoreButton } from '../Components/LoadMoreButton'
 export const FreshRecommendation = () => {
     const dispatch = useDispatch()
     const {products, isLoading} = useSelector(state => state.products, shallowEqual)
-    const [visible, setVisible] = React.useState(10)
+    const [visible, setVisible] = React.useState(12)
 
     React.useEffect(() => {
         showData()
@@ -19,15 +19,15 @@ export const FreshRecommendation = () => {
     }
     
     const showMoreItems = () => {
-        setVisible((prev) => prev + 10)
+        setVisible((prev) => prev + 13)
     }
 
     return isLoading ? (
         <LoadingIndicator/>
     ) : (
         <div> 
-            <h2>Fresh recommendations</h2>
-            <div style={{border: "2px solid red", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
+            <h2 style = {{textAlign : "left", marginLeft: "9%", color: "#002F34", fontWeight: "100" }} >Fresh recommendations</h2>
+            <div style={{border: "2px solid white", display: 'flex', flexWrap: "wrap", justifyContent: "space-around", marginRight: "9%", marginLeft: "9%"}}>
                 {products.slice(0, visible).map((item) => {
                     return <VehicleCard {...item} />
                 })}
