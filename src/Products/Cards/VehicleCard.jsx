@@ -1,11 +1,10 @@
 import React from 'react'
 import {FiHeart} from "react-icons/fi"
-
 import {CardLinkWrap, CardWrapper} from "../../Components/styles"
+
 export const VehicleCard = ({image, price, year, distance, address, postDate, brand, model, category, id }) => {
 
     return (
-        // <Wrapper style={{border: "2px solid red"}}>
             <CardWrapper>
                 <CardLinkWrap to = {`/item/${category}/${id}`}>
                 <div>
@@ -25,6 +24,5 @@ export const VehicleCard = ({image, price, year, distance, address, postDate, br
                 </div>   
                 </CardLinkWrap>    
             </CardWrapper>
-        // </Wrapper>
     )
 }

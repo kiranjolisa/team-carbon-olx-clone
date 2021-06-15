@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { Route, Switch } from 'react-router-dom'
-
 import '../App.css';
 import {Cars} from "../Products/Cars"
 import {Motorcycles} from "../Products/Motorcycles"
@@ -17,6 +15,9 @@ import { Navbar } from '../Components/Navbar';
 import { PostAd } from "../Components/PostAd/PostAd";
 import { PostSuccess } from "../Components/PostAdSuccess/PostSuccess";
 import { AttributeForm } from "../Components/AttributeForm/AttributeForm";
+import {ScrollToTop} from "../Components/ScrollToTop"
+import {MyAds} from "../Components/MyAds"
+import { Favourites } from '../Components/Favourites';
 import { DynamicCardContents } from '../Components/DynamicCardContents/DynamicCardContents';
 
 export const AllRoutes = () => {
