@@ -12,7 +12,7 @@ export const Chat = () => {
    const [ room, setRoom ] = useState("");
    const [ message, setMessage ] = useState("");
    const [ messages, setMessages ] = useState([]);
-   const ENDPOINT = 'localhost:5000'
+   const ENDPOINT = 'localhost:5000';
 
    useEffect(() => {
       const { name, room } = queryString.parse(window.location.search)

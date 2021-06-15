@@ -6,6 +6,8 @@ import Message from './Message';
 
 import EmptyChat from "../../Assets/emptyChat.png"
 
+import './Messages.css'
+
 const Messages = ({ messages, name }) => (
   <>
   <div style = {{
@@ -16,9 +18,7 @@ const Messages = ({ messages, name }) => (
   width = "200px" 
   src = {EmptyChat} 
   alt = "empty_conversation"/>:null}</div>
-  <ScrollToBottom style = {{padding: "5% 0",
-    overflow: "auto",
-    flex: "auto"}}>
+  <ScrollToBottom className = "messages">
     {messages.map((message, i) => <div key={i}><Message message={message} name={name}/></div>)}
   </ScrollToBottom>
   </>
