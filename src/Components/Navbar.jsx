@@ -1,11 +1,11 @@
 import React from 'react'
 import Modal from "react-modal";
-import { NavbarWrapper } from './styles'
+import { NavbarWrapper, SellButton, StyledLink, NavLogo } from './styles'
+import { Link } from "react-router-dom";
 import {FiSearch} from "react-icons/fi"
 import {RiArrowDownSLine} from "react-icons/ri"
+import olxPostLogo from '../Assets/olxPostLogo.svg';
 import { indianStates } from './AttributeForm/AttributeFormElements'
-import { SellButton, StyledLink, NavLogo } from './styles'
-import olxPostLogo from "../Assets/olxPostLogo.svg"
 import Authentication from "./Authentication"
 import styles from "./Modal.module.css"
 import { useHistory } from 'react-router-dom';
@@ -43,9 +43,14 @@ export const Navbar = () => {
 
     return (
         <NavbarWrapper>
+
             <NavLogo to = "/">
                 <img src={olxPostLogo} alt="logo"/>
             </NavLogo>
+
+            <Link to = '/'>
+                <img src={olxPostLogo} alt="logo" />
+            </Link>
             <div>
                 <select>
                     <option value="">SELECT</option>

@@ -1,12 +1,12 @@
 import React from 'react'
 import {FiHeart} from "react-icons/fi"
-import {CardWrapper} from "../../Components/styles"
-import {Wrapper} from "../../Components/styles"
+import {CardLinkWrap, CardWrapper} from "../../Components/styles"
 
-export const HouseCard = ({image, price, address, postDate, bedrooms, bathrooms, carParking}) => {
+export const HouseCard = ({image, price, address, postDate, bedrooms, bathrooms, carParking, category, id}) => {
     return (
         // <Wrapper>
             <CardWrapper>
+                <CardLinkWrap to = {`/item/${category}/${id}`}>
                 <div>
                     <div></div>
                     <img src= {image} alt= {image} />
@@ -21,7 +21,8 @@ export const HouseCard = ({image, price, address, postDate, bedrooms, bathrooms,
                 <div>
                     <p>{address}</p>
                     <p> {postDate}</p>
-                </div>       
+                </div> 
+                </CardLinkWrap>      
             </CardWrapper>
         // </Wrapper>
     )
