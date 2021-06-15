@@ -1,19 +1,22 @@
 import styled from "styled-components"
-
 import { Link } from "react-router-dom"
-
 
 export const NavbarWrapper = styled.div`
     display: flex;
     flex-direction: row;
     padding: 0.5%;
     background: #F7F8F9;
+    border: 1px solid #EEEEEE;
+
+    div:nth-child(1) {
+        margin-left: 7%;
+    }
 
     img {
      height: 6vh;
     }
 
-    select {
+    div:nth-child(2) > select {
         border: 2px solid #002F34;
         border-radius: 3px;
         height: 6vh;
@@ -25,11 +28,11 @@ export const NavbarWrapper = styled.div`
     }
     
 
-    select:hover {
+    div:nth-child(2) > select:hover {
         border: 2px solid #23E5DB;
     }
 
-    input {
+    div:nth-child(3) > input {
         border: 2px solid #002F34;
         border-radius: 3px;
         height: 5.2vh;
@@ -39,7 +42,7 @@ export const NavbarWrapper = styled.div`
         padding-left: 1%;
     }
 
-    input:hover {
+    div:nth-child(3) > input:hover {
         border: 2px solid #23E5DB;
     }
 
@@ -55,69 +58,49 @@ export const NavbarWrapper = styled.div`
         cursor: pointer;
     }
 
-    div:nth-child(5) {
-        margin: 0.7% 0 0 1%;
+    div:nth-child(5) > select {
+        border: none;
+        margin: 15% 0 0 10%;
         font-size: 15px;
         color: #002F34;
         font-weight: 700;
         cursor: pointer;
+        background: #F7F8F9;
+        outline: none;
     }
 
-    div:nth-child(6) >button {
+    div:nth-child(6) > button {
         border: none;
         border-bottom: 2px solid #002F34;
         outline: none;
-        margin: 20% 0 0 18%;
+        margin: 11% 30px 0 20%;
         font-size: 15px;
         color: #002F34;
         background: #F7F8F9;
         font-weight: 700;
         cursor: pointer;
     }
-
-    div:nth-child(7) > button {
-        border-top : 5px solid #23E5DB; 
-        border-right: 5px solid #3A77FF;
-        border-left: 5px solid #FFCE32;
-        border-bottom: 5px solid #FFCE32;
-        border-radius: 50%;
-        height: 7vh;
-        margin: 0.5% 0 0 35%;
-        font-size: 15px;
-        color: #002F34;
-        background: #ffffff;
-        font-weight: 700;
-        font-size: 20px;
-        cursor: pointer;
-    }
 `
-
-export const NavLogo = styled(Link)`
-    height : 6vh;
-    margin-left: 7.3%;
-    cursor: pointer; 
-`
-
-
 export const SellButton = styled.div`
     box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 35px; 
-    height : 40px; 
-    width : 100px;
+    height : 35px; 
+    width : 90px;
     margin : auto;
     margin-right: 5%;
     border-top : 6px solid #23e5db;
     border-left : 6px solid #ffce32;
     border-right : 6px solid #3a77ff;
-    border-bottom : 6px solid #ffce32;
+    border-bottom : 6px solid #3a77ff;
     display : flex;
     justify-content : center;
+    cursor: pointer;
 `
 
 export const StyledLink = styled(Link)`
     text-decoration : none;
     color: #002F34;
-    font-size : 1.2em;
+    font-size : 1em;
     font-weight: 700;
     margin : auto;
 `
@@ -125,14 +108,15 @@ export const StyledLink = styled(Link)`
 export const RoutesNavbarWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    border: 3px solid #F7F8F9 ;
+    border: 10px solid #F7F8F9 ;
     background-color: #FFFFFF;
     font-size: 15px;
     padding: 10px;
+    border: 1px solid #EEEEEE;
 
     div:nth-child(1) {
         margin-left: 7%;
-        margin-right: 3%;
+        margin-right: 1%;
         font-size: 15px;
         color: #002F34;
         font-weight: 700;
@@ -141,8 +125,12 @@ export const RoutesNavbarWrapper = styled.div`
     a{
         text-decoration: none;
         color: #002F34;
-        margin: 5px;
+        margin: 5px 12px 5px 5px;
         font-size: 15px;
+    }
+
+    a:hover {
+        color: #23e5db;
     }
 `
 
@@ -319,25 +307,12 @@ export const CardWrapper = styled.div`
         padding-right: 2%;
         font-size: 12px;
     }
-`
-// export const SellButton = styled.div`
-// box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// border-radius:20px; 
-// height : 40px; 
-// width : 100px;
-// margin : auto;
-// border-top : 4px solid #23e5db;
-// border-left : 4px solid #ffce32;
-// border-right : 4px solid #3a77ff;
-// border-bottom : 4px solid #ffce32;
-// display : flex;
-// justify-content : center;`
 
-// export const StyledLink = styled(Link)`
-// text-decoration : none;
-// color: black;
-// font-size : 1.2em;
-// margin : auto;`
+    div:nth-child(3) > p:nth-child(1) {
+        margin-left: 3.5%;
+    }
+
+`
 
 export const CardLinkWrap = styled(Link)`
 text-decoration : none;
@@ -465,6 +440,7 @@ export const Scroll = styled.div`
 export const ProfileWrapper = styled.div`
     display: flex;
     flex-direction: row;
+    margin-left: 5%;
 
     button:nth-child(1) {
         border: 1px solid #F7F8F9;
@@ -479,6 +455,12 @@ export const ProfileWrapper = styled.div`
         margin-left: 1.5%;
         cursor: pointer; 
         color: #002F34;
+    }
+
+    button:nth-child(1):hover, button:nth-child(2):hover {
+        border: 1px solid #8bf7f2;
+        border-radius: 50%;
+        background: #8bf7f2;
     }
 
     button:nth-child(3) {

@@ -1,5 +1,4 @@
 .container {
-    border: 2px solid red;
     box-sizing: border-box;
     width: 75%;
     margin: auto;
@@ -19,14 +18,12 @@
 
 .container > div:nth-child(1) {
     flex-basis: 60%;
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
 }
 
 .container > div:nth-child(2) {
     flex-basis: 38%;
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
 }
@@ -60,13 +57,11 @@
 }
 
 .spanCont {
-    /* border: 2px solid red; */
     display: flex;
     flex-wrap: wrap;
 }
 
 .spanCont > span {
-    /* border: 2px solid red; */
     flex-basis: 25%;
 }
 
