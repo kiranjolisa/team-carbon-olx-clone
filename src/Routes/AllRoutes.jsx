@@ -1,6 +1,8 @@
 import React from 'react'
+
+import { Route, Switch } from 'react-router-dom'
+
 import '../App.css';
-import { Route, Switch } from 'react-router'
 import {Cars} from "../Products/Cars"
 import {Motorcycles} from "../Products/Motorcycles"
 import {Mobilephones} from "../Products/Mobilephones"
@@ -15,10 +17,10 @@ import { Navbar } from '../Components/Navbar';
 import { PostAd } from "../Components/PostAd/PostAd";
 import { PostSuccess } from "../Components/PostAdSuccess/PostSuccess";
 import { AttributeForm } from "../Components/AttributeForm/AttributeForm";
+import { DynamicCardContents } from '../Components/DynamicCardContents/DynamicCardContents';
 
 export const AllRoutes = () => {
     return (
-        <div>
             <Switch>
             <Route exact path='/'>
                 <div className="App">
@@ -92,10 +94,12 @@ export const AllRoutes = () => {
             <Route exact path='/post/success'>
                 <PostSuccess />
             </Route>
+            <Route path = '/item/:category/:id'>
+                <DynamicCardContents />
+            </Route>
             <Route>
                 <h3>something went wrong</h3>
             </Route>
-            </Switch>
-        </div>
+        </Switch>
     )
 }

@@ -1,13 +1,18 @@
 import React from 'react'
-import { NavbarWrapper } from './styles'
+
+import { NavbarWrapper, SellButton, StyledLink } from './styles'
+import { Link } from "react-router-dom";
 import {FiSearch} from "react-icons/fi"
 import {RiArrowDownSLine} from "react-icons/ri"
+import olxPostLogo from '../Assets/olxPostLogo.svg';
 import { indianStates } from './AttributeForm/AttributeFormElements'
-import { SellButton, StyledLink } from './styles'
+
 export const Navbar = () => {
     return (
         <NavbarWrapper>
-            <img src="olx_logo-removebg.png" alt="logo" />
+            <Link to = '/'>
+                <img src={olxPostLogo} alt="logo" />
+            </Link>
             <div>
                 <select>
                     <option value="">SELECT</option>
