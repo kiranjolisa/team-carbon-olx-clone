@@ -23,6 +23,7 @@ export const NavbarWrapper = styled.div`
         font-size: 17px;
         cursor: pointer;
     }
+    
 
     select:hover {
         border: 2px solid #23E5DB;
