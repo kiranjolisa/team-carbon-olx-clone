@@ -248,7 +248,7 @@ export const CardWrapper = styled.div`
     text-align: left;
     margin: 0.6%;
     cursor: pointer;
-    flex-basis: 23.5%;
+    flex-basis: 30%;
 
     div:nth-child(1) {
         display: flex;

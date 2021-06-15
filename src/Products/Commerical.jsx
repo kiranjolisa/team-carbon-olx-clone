@@ -4,6 +4,7 @@ import {getCarsData} from "../Redux/products/action"
 import { VehicleCard } from './Cards/VehicleCard'
 import {LoadingIndicator} from "../Components/LoadingIndicator"
 import { LoadMoreButton } from '../Components/LoadMoreButton'
+import FilterCars from '../Components/FilterCars';
 
 export const Commerical = () => {
     const dispatch = useDispatch()
@@ -25,13 +26,16 @@ export const Commerical = () => {
     return isLoading ? (
         <LoadingIndicator/>
     ) : (
-        <div>
+        <>
+        <div style={{display: "flex", justifyContent: "space-around", width: "90%", margin: "auto"}}>
+        <div style={{flexBasis: "35%"}}><FilterCars/></div>
         <div style={{border: "2px solid white", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
             {products.slice(0, visible).map((item) => {
                 return <VehicleCard {...item} />
             })}
         </div>
-        <LoadMoreButton showMoreItems = {showMoreItems}  />
     </div>
+    <LoadMoreButton showMoreItems = {showMoreItems}  />
+    </>
     )
 }
