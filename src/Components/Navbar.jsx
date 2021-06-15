@@ -25,7 +25,7 @@ export const Navbar = () => {
         if(query === "cars") {
             history.push("/cars")
         }
-        else if(query === "motorcycles") {
+        else if(query === "motor cycles") {
             history.push("/motorcycles")
         }
         else if(query === "mobiles") {

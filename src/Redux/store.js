@@ -4,7 +4,7 @@ import { reducer as categoryReducer } from "./MainCategory/reducer";
 import { reducer as postAdReducer } from "./PostData/reducer";
 import { reducer as dynamicDataReducer } from './GetDynamicData/reducer'
 import { reducer as languageReducer } from "./LanguageTranslator/reducer";
-
+import { reducer as wishlistReducer } from "./Wishlist/reducer";
 import { getDataReducer } from "./products/reducer";
 
 const rootReducer = combineReducers({
@@ -12,7 +12,8 @@ const rootReducer = combineReducers({
     postAd : postAdReducer,
     products : getDataReducer,
     dynamicContent : dynamicDataReducer,
-    language: languageReducer
+    language: languageReducer,
+    wishlist  : wishlistReducer
 })
 
 export const store = createStore(rootReducer, 

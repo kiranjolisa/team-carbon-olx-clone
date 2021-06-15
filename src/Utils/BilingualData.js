@@ -34,6 +34,11 @@ export const wordHashes = {
     sell : {
         en : "SELL",
         hi : "बेचें"
+    },
+    //Not added from here to the actual page
+    myAds : {
+      en : "My Ads",
+      hi : ""
     }
   };
   
