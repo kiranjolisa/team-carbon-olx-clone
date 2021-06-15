@@ -22,6 +22,7 @@ import { DynamicCardContents } from '../Components/DynamicCardContents/DynamicCa
 
 export const AllRoutes = () => {
     return (
+        <>
             <Switch>
             <Route exact path='/'>
                 <div className="App">
@@ -98,9 +99,25 @@ export const AllRoutes = () => {
             <Route path = '/item/:category/:id'>
                 <DynamicCardContents />
             </Route>
+            <Route path="/myAds">
+                    <div className="App">
+                        <Navbar />
+                        <NavbarRoutes />
+                        <MyAds/>
+                        <Footer /></div>
+                </Route>
+                <Route path="/favourites">
+                    <div className="App">
+                        <Navbar />
+                        <NavbarRoutes />
+                        <Favourites/>
+                        <Footer /></div>
+                </Route>
             <Route>
                 <h3>something went wrong</h3>
             </Route>
         </Switch>
+        <ScrollToTop/>
+        </>
     )
 }

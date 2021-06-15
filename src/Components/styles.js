@@ -558,3 +558,11 @@ export const AdsWrapper = styled.div`
         text-align: left;
     }
 `
+
+export const AdImage = styled.img`
+max-width : 1200px;
+margin-top : 1%;
+height : 250px;
+&:hover{
+    cursor : pointer;
+}`
