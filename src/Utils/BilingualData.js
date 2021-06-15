@@ -38,7 +38,39 @@ export const wordHashes = {
     //Not added from here to the actual page
     myAds : {
       en : "My Ads",
-      hi : ""
+      hi : "मेरे विज्ञापन"
+    },
+    hello : {
+      en : "Hello",
+      hi : "नमस्कार"
+    },
+    viewAndEditProfile : {
+      en : "View and edit profile",
+      hi : "प्रोफ़ाइल देखें और संपादित करें"
+    },
+    buyBusinessPackages : {
+      en : "Buy Business Packages",
+      hi : "बिजनेस पैकेज खरीदें"
+    },
+    boughtPackages : {
+      en : "Bought Packages & Billing",
+      hi : "ख़रीदे गए पैकेज और बिलिंग"
+    },
+    help : {
+      en : "Help",
+      hi : "सहायता"
+    }, 
+    settings : {
+      en : "Settings",
+      hi : "सेटिंग्स"
+    }, 
+    installOlxLite : {
+      en : "Install OLX Lite App",
+      hi : "OLX लाइट ऐप इंस्टॉल करें"
+    }, 
+    logout : {
+      en : "Logout",
+      hi : "लॉगआउट करें"
     }
   };
   

@@ -8,9 +8,9 @@ export const VehicleCard = ({image, price, year, distance, address, postDate, br
     const dispatch = useDispatch();
 
     const addToWishlist = (e) => {
-        //e.cancelBubble = true;
-        console.log('updating wishlist');
+        e.preventDefault();
         e.stopPropagation();
+        console.log('updating wishlist');
         const payload = {category : category, id : id}
         dispatch(addWhishlist(payload));
     }
