@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import '../App.css';
 import {Cars} from "../Products/Cars"
 import {Motorcycles} from "../Products/Motorcycles"
@@ -19,8 +19,13 @@ import {ScrollToTop} from "../Components/ScrollToTop"
 import {MyAds} from "../Components/MyAds"
 import { Favourites } from '../Components/Favourites';
 import { DynamicCardContents } from '../Components/DynamicCardContents/DynamicCardContents';
+import { useSelector } from 'react-redux'
 
 export const AllRoutes = () => {
+
+    const isAuth = useSelector(state => state.products.isAuth)
+
+
     return (
         <>
             <Switch>
@@ -88,7 +93,7 @@ export const AllRoutes = () => {
                     <Footer /></div>
             </Route>
             <Route exact path='/post'>
-                <PostAd />
+                { isAuth ? <PostAd  /> : <Redirect to = "/" /> }
             </Route>
             <Route exact path='/post/attributes'>
                 <AttributeForm />

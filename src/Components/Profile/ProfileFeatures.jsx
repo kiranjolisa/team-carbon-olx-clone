@@ -16,7 +16,7 @@ export const ProfileFeatures = () => {
                 <img src= {avatar} alt="avatar" />
                 <div>
                     <div>Hello,</div>
-                    <div>User</div>
+                    <div>Kapil</div>
                     <div color = "#002F34;">
                         <Link>View and edit profile</Link>
                     </div>

@@ -31,7 +31,7 @@ export const VehicleCard = ({image, price, year, distance, address, postDate, br
                 </div>
                 <div>
                     <p>{address}</p>
-                    <p> {postDate}</p>
+                    <p>{postDate}</p>
                 </div>   
                 </CardLinkWrap>    
             </CardWrapper>

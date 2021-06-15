@@ -22,7 +22,8 @@ import { GET_CARS_FAILURE,
         GET_SALES_HOUSE_SUCCESS, 
         GET_SCOOTERS_FAILURE, 
         GET_SCOOTERS_REQUEST, 
-        GET_SCOOTERS_SUCCESS } 
+        GET_SCOOTERS_SUCCESS, 
+        TOGGLE_AUTH} 
 from "./actionType"
 
 
@@ -284,4 +285,10 @@ export const getFreshRecommendationData = payload => dispatch => {
     .catch(err => {
         dispatch(getFreshRecommendationFailure())
     })
+}
+
+export const toggleAuth = () => {
+    return {
+        type: TOGGLE_AUTH
+    }
 }
