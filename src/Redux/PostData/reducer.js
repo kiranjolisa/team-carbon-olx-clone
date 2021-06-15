@@ -2,9 +2,10 @@ import { POST_AD_FAILURE, POST_AD_REQUEST, POST_AD_SUCCESS, UNSET_SUCCESS_STATUS
 
 const initState = {
     postingAd : false,
-    postingAdSuccess : false
+    postingAdSuccess : false,
+    postedAds : []
 }
-export const reducer = ( state = initState, { type }) => {
+export const reducer = ( state = initState, { type, payload }) => {
     switch(type){
         case POST_AD_REQUEST:
             return{
@@ -17,7 +18,8 @@ export const reducer = ( state = initState, { type }) => {
             return {
                 ...state,
                 postingAdSuccess : true,
-                postingAd : false
+                postingAd : false,
+                postedAds : [...state.postedAds, payload]
             }
         
         case POST_AD_FAILURE:

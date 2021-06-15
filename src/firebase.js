@@ -10,14 +10,14 @@ import "firebase/auth"
 //   appId: process.env.REACT_APP_FIREBASE_APP_ID
 // })
 
-const app = firebase.initializeApp({
-  apiKey: "AIzaSyAA92-c4ODT5Fy26f4wu9EzWg0rWV_ifqw",
-  authDomain: "olx-auth-46af4.firebaseapp.com",
-  projectId: "olx-auth-46af4",
-  storageBucket: "olx-auth-46af4.appspot.com",
-  messagingSenderId: "649857775061",
-  appId: "1:649857775061:web:70d858200dd9ad3dee795c"
-});
+// const app = firebase.initializeApp({
+//   apiKey: "AIzaSyAA92-c4ODT5Fy26f4wu9EzWg0rWV_ifqw",
+//   authDomain: "olx-auth-46af4.firebaseapp.com",
+//   projectId: "olx-auth-46af4",
+//   storageBucket: "olx-auth-46af4.appspot.com",
+//   messagingSenderId: "649857775061",
+//   appId: "1:649857775061:web:70d858200dd9ad3dee795c"
+// });
 
-export const auth = app.auth()
-export default app
+// export const auth = app.auth()
+// export default app

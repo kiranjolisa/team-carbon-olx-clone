@@ -6,7 +6,7 @@ export const postAd = (payload) => (dispatch) => {
         console.log(payload);
         axios.post('https://json-server-olx.herokuapp.com/postAd', payload)
         .then(res => {
-            dispatch(postAdSuccess())
+            dispatch(postAdSuccess(payload))
         })
         .catch(err => {
             console.log(err)
@@ -14,6 +14,6 @@ export const postAd = (payload) => (dispatch) => {
         })
 }
 export const postAdRequest = () => ({type : POST_AD_REQUEST})
-export const postAdSuccess = () => ({type : POST_AD_SUCCESS})
+export const postAdSuccess = (payload) => ({type : POST_AD_SUCCESS, payload})
 export const postAdFailure = () => ({type : POST_AD_FAILURE})
 export const unsetSuccessStatus = () => ({type : UNSET_SUCCESS_STATUS})

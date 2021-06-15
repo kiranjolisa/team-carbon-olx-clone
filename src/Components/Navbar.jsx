@@ -1,5 +1,6 @@
 import React from 'react'
 import Modal from "react-modal";
+import {useDispatch, useSelector } from "react-redux";
 import { NavbarWrapper, SellButton, StyledLink, NavLogo } from './styles'
 import { Link } from "react-router-dom";
 import {FiSearch} from "react-icons/fi"
@@ -10,18 +11,21 @@ import Authentication from "./Authentication"
 import styles from "./Modal.module.css"
 import { useHistory } from 'react-router-dom';
 import { Profile } from './Profile/Profile';
-
+import { switchToEnglish, switchToHindi } from '../Redux/LanguageTranslator/action';
+import { wordHashes } from "../Utils/BilingualData"
 export const Navbar = () => {
 
     const [show, setShow] = React.useState(false)
     const [query, setQuery] = React.useState("")
     const history = useHistory()
+    const dispatch = useDispatch();
+    const language = useSelector((state) => state.language.lang);
 
     const handleSearch = () => {
         if(query === "cars") {
             history.push("/cars")
         }
-        else if(query === "motorcycles") {
+        else if(query === "motor cycles") {
             history.push("/motorcycles")
         }
         else if(query === "mobiles") {
@@ -40,13 +44,21 @@ export const Navbar = () => {
             history.push("/rentHouse")
         }
     }
+  const handleLanguageSwitch = (e) => {
+    console.log(e.target.value);
+    if (e.target.value === "en") {
+      dispatch(switchToEnglish() );
+    } else {
+      dispatch(switchToHindi());
+    }
+  };
 
     return (
         <NavbarWrapper>
 
-            <NavLogo to = "/">
+            {/* <NavLogo to = "/">
                 <img src={olxPostLogo} alt="logo"/>
-            </NavLogo>
+            </NavLogo> */}
 
             <Link to = '/'>
                 <img src={olxPostLogo} alt="logo" />
@@ -67,9 +79,12 @@ export const Navbar = () => {
             <div >
                 <button onClick = {handleSearch} ><FiSearch size = "25px"/></button>
             </div>
-            <div>
-                <span>ENGLISH <RiArrowDownSLine/> </span>
-            </div>
+            <span>
+            <select onChange = {handleLanguageSwitch}>
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+            </select>
+            </span>
             <div>
                 {/* <button onClick = {() => setShow(true) } >Login</button> */}
                 <Profile/>
@@ -78,7 +93,7 @@ export const Navbar = () => {
                 </Modal>
             </div>
                 <SellButton>
-                    <StyledLink to = '/post'>+ SELL</StyledLink>
+                    <StyledLink to = '/post'>+ {wordHashes.sell[language]}</StyledLink>
                 </SellButton>
         </NavbarWrapper>
     )

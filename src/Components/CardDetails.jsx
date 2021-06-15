@@ -6,7 +6,7 @@ function CardDetails({image, brand, year, model, distance, price, address, date,
         <div className={styles.container}>
             <div className={styles.subContainer}>
                 <div style={{border: "1px solid rgba(0,47,52,.64)"}} className={styles.custom}>
-                    <img src = {image[0]} alt = "content" /></div>
+                    <img src = {image} alt = "content" /></div>
                 <div style={{textAlign: "left", border: "1px solid rgba(0,47,52,.64)"}}>
                     <div style={{fontWeight: "700", fontSize: "20px"}}>Details</div>
                     <div className={styles.spanCont}>

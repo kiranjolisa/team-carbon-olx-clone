@@ -1,0 +1,2 @@
+export const SWITCH_TO_HINDI = "SWITCH_TO_HINDI";
+export const SWITCH_TO_ENGLISH = "SWITCH_TO_ENGLISH";

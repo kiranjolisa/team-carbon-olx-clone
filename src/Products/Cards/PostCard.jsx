@@ -1,19 +1,8 @@
 import React from 'react'
 import {FiHeart} from "react-icons/fi"
-import { useDispatch } from 'react-redux'
 import {CardLinkWrap, CardWrapper} from "../../Components/styles"
-import { addWhishlist } from '../../Redux/Wishlist/action'
 
-export const VehicleCard = ({image, price, year, distance, address, postDate, brand, model, category, id }) => {
-    const dispatch = useDispatch();
-
-    const addToWishlist = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('updating wishlist');
-        const payload = {category : category, id : id}
-        dispatch(addWhishlist(payload));
-    }
+export const PostCard = ({image, price, year, distance, address, postDate, brand, model, category, id }) => {
 
     return (
             <CardWrapper>
@@ -22,7 +11,7 @@ export const VehicleCard = ({image, price, year, distance, address, postDate, br
                     <div></div>
                     <img src= {image} alt= {image} />
                     <div></div>
-                    <button onClick = {addToWishlist}><FiHeart/></button>
+                    <button><FiHeart/></button>
                 </div>
                 <div>
                     <p> ₹ {price}</p>

@@ -23,6 +23,7 @@ export const NavbarWrapper = styled.div`
         font-size: 17px;
         cursor: pointer;
     }
+    
 
     select:hover {
         border: 2px solid #23E5DB;
@@ -557,3 +558,11 @@ export const AdsWrapper = styled.div`
         text-align: left;
     }
 `
+
+export const AdImage = styled.img`
+max-width : 1200px;
+margin-top : 1%;
+height : 250px;
+&:hover{
+    cursor : pointer;
+}`
