@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import '../App.css';
 import { Cars } from "../Products/Cars"
 import { Motorcycles } from "../Products/Motorcycles"
@@ -20,86 +20,91 @@ import { MyAds } from "../Components/MyAds"
 import { Favourites } from '../Components/Favourites';
 import { DynamicCardContents } from '../Components/DynamicCardContents/DynamicCardContents';
 import { Chat } from "../Components/Chat/Chat";
+import { useSelector } from 'react-redux'
 
 export const AllRoutes = () => {
+
+    const isAuth = useSelector(state => state.products.isAuth)
+
+
     return (
         <>
             <Switch>
-                <Route exact path='/'>
-                    <div className="App">
-                        <Navbar />
-                        <NavbarRoutes />
-                        <Home />
-                        <Footer />
-                    </div>
-                </Route>
-                <Route path="/cars">
-                    <div className="App">
-                        <Navbar />
-                        <NavbarRoutes />
-                        <Cars />
-                        <Footer />
-                    </div>
-                </Route>
-                <Route path="/motorcycles">
-                    <div className="App">
-                        <Navbar />
-                        <NavbarRoutes />
-                        <Motorcycles />
-                        <Footer />
-                    </div>
-                </Route>
-                <Route path="/mobile">
-                    <div className="App">
-                        <Navbar />
-                        <NavbarRoutes />
-                        <Mobilephones />
-                        <Footer />
-                    </div>
-                </Route>
-                <Route path="/saleHouse">
-                    <div className="App">
-                        <Navbar />
-                        <NavbarRoutes />
-                        <HouseForSale />
-                        <Footer />
-                    </div>
-                </Route>
-                <Route path="/scooters">
-                    <div className="App">
-                        <Navbar />
-                        <NavbarRoutes />
-                        <Scooters />
-                        <Footer />
-                    </div>
-                </Route>
-                <Route path="/commerical">
-                    <div className="App">
-                        <Navbar />
-                        <NavbarRoutes />
-                        <Commerical />
-                        <Footer />
-                    </div>
-                </Route>
-                <Route path="/rentHouse">
-                    <div className="App">
-                        <Navbar />
-                        <NavbarRoutes />
-                        <HouseForRent />
-                        <Footer /></div>
-                </Route>
-                <Route exact path='/post'>
-                    <PostAd />
-                </Route>
-                <Route exact path='/post/attributes'>
-                    <AttributeForm />
-                </Route>
-                <Route exact path='/post/success'>
-                    <PostSuccess />
-                </Route>
-                <Route path='/item/:category/:id'>
-                    <DynamicCardContents />
-                </Route>
+            <Route exact path='/'>
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Home/>
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/cars">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Cars />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/motorcycles">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Motorcycles />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/mobile">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Mobilephones />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/saleHouse">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <HouseForSale />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/scooters">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Scooters />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/commerical">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <Commerical />
+                    <Footer />
+                </div>
+            </Route>
+            <Route path="/rentHouse">
+                <div className="App">
+                    <Navbar />
+                    <NavbarRoutes />
+                    <HouseForRent />
+                    <Footer /></div>
+            </Route>
+            <Route exact path='/post'>
+                { isAuth ? <PostAd  /> : <Redirect to = "/" /> }
+            </Route>
+            <Route exact path='/post/attributes'>
+                <AttributeForm />
+            </Route>
+            <Route exact path='/post/success'>
+                <PostSuccess />
+            </Route>
+            <Route path = '/item/:category/:id'>
+                <DynamicCardContents />
+            </Route>
                 <Route path="/myAds">
                     <div className="App">
                         <Navbar />
@@ -118,7 +123,7 @@ export const AllRoutes = () => {
                 <div className="App">
                         <Navbar />
                         <NavbarRoutes />
-                        <Chat />
+                     { isAuth ? <Chat />: <Redirect to = "/" /> }
                         <Footer /></div>
                 </Route>
                 <Route>

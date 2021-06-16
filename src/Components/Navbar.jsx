@@ -1,10 +1,9 @@
 import React from 'react'
 import Modal from "react-modal";
 import {useDispatch, useSelector } from "react-redux";
-import { NavbarWrapper, SellButton, StyledLink, NavLogo } from './styles'
+import { NavbarWrapper, SellButton, StyledLink} from './styles'
 import { Link } from "react-router-dom";
 import {FiSearch} from "react-icons/fi"
-import {RiArrowDownSLine} from "react-icons/ri"
 import olxPostLogo from '../Assets/olxPostLogo.svg';
 import { indianStates } from './AttributeForm/AttributeFormElements'
 import Authentication from "./Authentication"
@@ -20,6 +19,7 @@ export const Navbar = () => {
     const history = useHistory()
     const dispatch = useDispatch();
     const language = useSelector((state) => state.language.lang);
+    const isAuth = useSelector(state => state.products.isAuth)
 
     const handleSearch = () => {
         if(query === "cars") {
@@ -31,7 +31,7 @@ export const Navbar = () => {
         else if(query === "mobiles") {
             history.push("/mobiles")
         }
-        else if(query === "salesHouse") {
+        else if(query === "sales") {
             history.push("/salesHouse")
         }
         else if(query === "scooters") {
@@ -40,29 +40,27 @@ export const Navbar = () => {
         else if(query === "commerical") {
             history.push("/commerical")
         }
-        else if(query === "rentHouse") {
+        else if(query === "rent") {
             history.push("/rentHouse")
         }
     }
-  const handleLanguageSwitch = (e) => {
-    console.log(e.target.value);
-    if (e.target.value === "en") {
-      dispatch(switchToEnglish() );
-    } else {
-      dispatch(switchToHindi());
-    }
-  };
+
+    const handleLanguageSwitch = (e) => {
+        console.log(e.target.value);
+        if (e.target.value === "en") {
+        dispatch(switchToEnglish() );
+        } else {
+        dispatch(switchToHindi());
+        }
+    };
 
     return (
         <NavbarWrapper>
-
-            {/* <NavLogo to = "/">
-                <img src={olxPostLogo} alt="logo"/>
-            </NavLogo> */}
-
-            <Link to = '/'>
-                <img src={olxPostLogo} alt="logo" />
-            </Link>
+            <div>
+                <Link to = '/'>
+                    <img src={olxPostLogo} alt="logo" />
+                </Link>
+            </div>
             <div>
                 <select>
                     <option value="">SELECT</option>
@@ -79,22 +77,26 @@ export const Navbar = () => {
             <div >
                 <button onClick = {handleSearch} ><FiSearch size = "25px"/></button>
             </div>
-            <span>
-            <select onChange = {handleLanguageSwitch}>
-                <option value="en">English</option>
-                <option value="hi">हिंदी</option>
-            </select>
-            </span>
             <div>
-                {/* <button onClick = {() => setShow(true) } >Login</button> */}
-                <Profile/>
-                <Modal className = {styles.modal} isOpen = {show} onRequestClose = {() => setShow(false)} style={{ overlay: { backgroundColor: "#333333", opacity: "1"}}}>
+                <select onChange = {handleLanguageSwitch}>
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+            </div>
+            <div>
+                {!isAuth && <button onClick = {() => setShow(true) } >Login</button>}
+                
+                {isAuth && <Profile/> }
+                <Modal className = {styles.modal} isOpen = {show} onRequestClose = {() => setShow(false)} style={{ overlay: { backgroundColor: "none", opacity: "1"}}}>
                     <Authentication/>
                 </Modal>
             </div>
+            <div>
                 <SellButton>
-                    <StyledLink to = '/post'>+ {wordHashes.sell[language]}</StyledLink>
+                        <StyledLink to = '/post'>+ {wordHashes.sell[language]}</StyledLink>
                 </SellButton>
+            </div>
+                
         </NavbarWrapper>
     )
 }

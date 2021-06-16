@@ -1,6 +1,6 @@
 export const wordHashes = {
     allCategories: {
-      en: "All Categories",
+      en: "ALL CATEGORIES",
       hi: "सभी श्रेणियां"
     },
     cars: {

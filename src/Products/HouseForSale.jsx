@@ -4,6 +4,7 @@ import {getSalesHouseData} from "../Redux/products/action"
 import {LoadingIndicator} from "../Components/LoadingIndicator"
 import { HouseCard } from './Cards/HouseCard'
 import { LoadMoreButton } from '../Components/LoadMoreButton'
+import FilterForSale from "../Components/FilterForSale";
 
 export const HouseForSale = () => {
     const dispatch = useDispatch()
@@ -25,13 +26,16 @@ export const HouseForSale = () => {
     return isLoading ? (
         <LoadingIndicator/>
     ) : (
-        <div>
+        <>
+        <div style={{display: "flex", justifyContent: "space-around", width: "90%", margin: "auto"}}>
+        <div style={{flexBasis: "35%"}}><FilterForSale/></div>
         <div style={{border: "2px solid white", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
             {products.slice(0, visible).map((item) => {
                 return <HouseCard {...item} />
             })}
         </div>
-        <LoadMoreButton showMoreItems = {showMoreItems}  />
     </div>
+    <LoadMoreButton showMoreItems = {showMoreItems}  />
+    </>
     )
 }
