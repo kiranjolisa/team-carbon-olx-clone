@@ -314,6 +314,66 @@ export const CardWrapper = styled.div`
 
 `
 
+export const PostCardWrapper = styled.div`
+    border: 1px solid #CCD5D6;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    flex-basis: 30%;
+    width: 22%;
+    margin: 2% 2% 1% 8%;
+    flex-wrap: wrap;
+
+    div:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div:nth-child(1) > img {
+        height: 20vh;
+        margin-top: 2%;
+        width: 100%;
+        margin-left: 4%;
+    }
+
+    div:nth-child(1) > button {
+        height: 5vh;
+        border: 0;
+        outline: none;
+        background: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 3% 0 0 14%;
+    }
+
+    div:nth-child(2) {
+        margin-left: 4%;
+        font-size: 20px;
+        font-weight: 700;
+        color: #002F34;
+    }
+
+    div:nth-child(3) {
+        margin-left: 4%;
+        color: #5C7A7D;
+
+    }  
+
+    div:nth-child(4) > p:nth-child(1) {
+        width: 75%;
+    }
+
+    div:nth-child(4) {
+        display: flex;
+        flex-direction: row;
+        margin-left: 4%;
+        font-size: 14px;
+        color: #5C7A7D;
+    }
+
+`
+
+
 export const CardLinkWrap = styled(Link)`
 text-decoration : none;
 color : inherit;`

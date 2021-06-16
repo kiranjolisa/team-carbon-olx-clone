@@ -1,6 +1,5 @@
 import React from 'react'
 import { FreshRecommendation } from '../Products/FreshRecommendation'
-// import {HomeCarousel} from "./HomeCarousel"
 import homepageBackground from "../Assets/homepageBackground.jpg"
 import { AdImage } from "./styles"
 export const Home = () => {

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import {Link} from "react-router-dom"
 import {AdsWrapper} from "./styles"
 import {FiHeart} from "react-icons/fi"
-import {CardWrapper} from "./styles"
+import {PostCardWrapper} from "./styles"
 
 
 export const MyAds = () => {
@@ -15,30 +15,26 @@ export const MyAds = () => {
            <Link to = "/favourites">FAVOURITES</Link>
         </AdsWrapper>
         {postedAds.length !== 0 && postedAds.map(item => <div>
-            <CardWrapper>
+            <PostCardWrapper>
                 <div>
-                    <div></div>
                     <img src= {item.imageUrls[0]} alt= "ads" />
-                    <div></div>
                     <button><FiHeart/></button>
                 </div>
                 <div>
                     <p> ₹ {item.price}</p>
-                    <p> {item.description} </p>
                 </div>
                 <div>
-                    {/* <p>{address}</p> */}
+                    <p> {item.description} </p>
+                    <p>{item.subCategory}</p>
+                </div>
+                <div>
+                    <p>{item.state}</p>
                     <p> {item.adPostDate}</p>
                 </div>     
-            </CardWrapper>
+            </PostCardWrapper>
         </div>
         )}
         </div>
     
     )
 }
-
-{/* <img src = {item.imageUrls[0]} alt = "ad" />
-            <h4>{item.price}</h4>
-            <h4>{item.adPostDate}</h4>
-            <h1>{item.title}</h1> */}
