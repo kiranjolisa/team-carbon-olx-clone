@@ -524,6 +524,7 @@ export const AdsWrapper = styled.div`
         font-size: 14px;
         margin: 0 0 0 1%;
         text-align: left;
+        border-bottom: 1px solid #CCD5D6;
     }
 
     a:nth-child(2) {
@@ -533,12 +534,18 @@ export const AdsWrapper = styled.div`
         margin-right: 75%;
         text-align: left;
     }
+
+    a:active {
+        border-bottom: 5px solid #002F34;
+    }
 `
 
 export const AdImage = styled.img`
-max-width : 1200px;
-margin-top : 1%;
-height : 250px;
-&:hover{
-    cursor : pointer;
-}`
+    max-width : 1200px;
+    margin-top : 1%;
+    height : 250px;
+
+    &:hover{
+        cursor : pointer;
+    }
+`

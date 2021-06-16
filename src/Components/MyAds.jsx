@@ -11,8 +11,8 @@ export const MyAds = () => {
     return (
         <div>
         <AdsWrapper>
-           <Link to = "/myAds" >ADS</Link>
-           <Link to = "/favourites">FAVOURITES</Link>
+           <Link exact to = "/myAds" >ADS</Link>
+           <Link exact to = "/favourites">FAVOURITES</Link>
         </AdsWrapper>
         {postedAds.length !== 0 && postedAds.map(item => <div>
             <PostCardWrapper>
@@ -34,7 +34,6 @@ export const MyAds = () => {
             </PostCardWrapper>
         </div>
         )}
-        </div>
-    
+    </div>
     )
 }
