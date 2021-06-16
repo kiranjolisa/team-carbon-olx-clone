@@ -373,7 +373,6 @@ export const PostCardWrapper = styled.div`
 
 `
 
-
 export const CardLinkWrap = styled(Link)`
 text-decoration : none;
 color : inherit;`
@@ -385,7 +384,7 @@ export const LoadMore = styled.div`
         padding: 1%;
         font-size: 17px;
         color: #002F34;
-        margin-top: 0.5%;
+        margin-top: 1%;
         cursor: pointer;
     }
 
@@ -396,72 +395,7 @@ export const LoadMore = styled.div`
     }
 
 `
-export const CarouselCardWrapper = styled.div`
-    border: 1px solid #CCD5D6;
-    border-radius: 5px;
-    text-align: left;
-    margin: 0.5%;
-    cursor: pointer;
-    flex-basis: 22%;
 
-    div:nth-child(1) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    div:nth-child(1) > div {
-        flex-grow: 1;
-    }
-
-    div:nth-child(1) > img{
-        height: 20vh;
-        margin-top: 2%;
-        max-width: 85%;
-    }
-
-    div:nth-child(1) > button {
-        height: 5vh;
-        border: 0;
-        outline: none;
-        background: #ffffff;
-        font-size: 20px;
-        cursor: pointer;
-        margin: 3% 0 0 0;
-    }
-
-    div:nth-child(2) {
-        margin: 0 0 0 5%;
-    }
-
-    div:nth-child(2) > p:nth-child(1) {
-        font-size: 20px;
-        font-weight: 700;
-        color: #002F34;
-        margin-bottom: -0.9%;
-    }
-
-    div:nth-child(2) > p:nth-child(2) {
-        font-size: 14px;
-        margin-bottom: -0.9%;
-        color: #5C7A7D;
-    }
-
-    div:nth-child(2) > p:nth-child(3) {
-        font-size: 14px;
-        margin-bottom: -0.1%;
-        color: #5C7A7D;
-    }
-
-    div:nth-child(3) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 2%;
-        padding-right: 2%;
-        font-size: 12px;
-    }
-`
 export const Scroll = styled.div`
     position: fixed;
     top: 0;

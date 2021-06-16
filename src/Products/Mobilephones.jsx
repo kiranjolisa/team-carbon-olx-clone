@@ -27,11 +27,11 @@ export const Mobilephones = () => {
         <LoadingIndicator/>
     ) : (
         <>
-        <div style={{display: "flex", justifyContent: "space-around", width: "90%", margin: "auto"}}>
+        <div style={{display: "flex", justifyContent: "space-around", width: "90%", margin: "auto", marginTop: "3%"}}>
             <div style={{flexBasis: "35%"}}><FilterCars/></div>
         <div style={{border: "2px solid white", display: 'flex', flexWrap: "wrap", justifyContent: "space-around"}}>
             {products.slice(0, visible).map((item) => {
-                return <VehicleCard {...item} />
+                return <VehicleCard key = {item.id} {...item} />
             })}
         </div>
     </div>
