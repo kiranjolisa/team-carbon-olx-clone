@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import '../App.css';
-import {Cars} from "../Products/Cars"
-import {Motorcycles} from "../Products/Motorcycles"
-import {Mobilephones} from "../Products/Mobilephones"
-import {Scooters} from "../Products/Scooters"
-import {Commerical} from "../Products/Commerical"
-import {HouseForRent} from "../Products/HouseForRent"
+import { Cars } from "../Products/Cars"
+import { Motorcycles } from "../Products/Motorcycles"
+import { Mobilephones } from "../Products/Mobilephones"
+import { Scooters } from "../Products/Scooters"
+import { Commerical } from "../Products/Commerical"
+import { HouseForRent } from "../Products/HouseForRent"
 import { HouseForSale } from '../Products/HouseForSale'
 import { NavbarRoutes } from '../Components/NavbarRoutes'
 import { Footer } from '../Components/Footer'
@@ -15,10 +15,11 @@ import { Navbar } from '../Components/Navbar';
 import { PostAd } from "../Components/PostAd/PostAd";
 import { PostSuccess } from "../Components/PostAdSuccess/PostSuccess";
 import { AttributeForm } from "../Components/AttributeForm/AttributeForm";
-import {ScrollToTop} from "../Components/ScrollToTop"
-import {MyAds} from "../Components/MyAds"
+import { ScrollToTop } from "../Components/ScrollToTop"
+import { MyAds } from "../Components/MyAds"
 import { Favourites } from '../Components/Favourites';
 import { DynamicCardContents } from '../Components/DynamicCardContents/DynamicCardContents';
+import { Chat } from "../Components/Chat/Chat";
 import { useSelector } from 'react-redux'
 
 export const AllRoutes = () => {
@@ -104,25 +105,32 @@ export const AllRoutes = () => {
             <Route path = '/item/:category/:id'>
                 <DynamicCardContents />
             </Route>
-            <Route path="/myAds">
+                <Route path="/myAds">
                     <div className="App">
                         <Navbar />
                         <NavbarRoutes />
-                        <MyAds/>
+                        <MyAds />
                         <Footer /></div>
                 </Route>
                 <Route path="/favourites">
                     <div className="App">
                         <Navbar />
                         <NavbarRoutes />
-                        <Favourites/>
+                        <Favourites />
                         <Footer /></div>
                 </Route>
-            <Route>
-                <h3>something went wrong</h3>
-            </Route>
-        </Switch>
-        <ScrollToTop/>
+                <Route path = "/chat">
+                <div className="App">
+                        <Navbar />
+                        <NavbarRoutes />
+                     { isAuth ? <Chat />: <Redirect to = "/" /> }
+                        <Footer /></div>
+                </Route>
+                <Route>
+                    <h3>something went wrong</h3>
+                </Route>
+            </Switch>
+            <ScrollToTop />
         </>
     )
 }
