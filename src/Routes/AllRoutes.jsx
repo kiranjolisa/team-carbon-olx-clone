@@ -123,7 +123,7 @@ export const AllRoutes = () => {
                 <div className="App">
                         <Navbar />
                         <NavbarRoutes />
-                     { isAuth ? <Chat />: <Redirect to = "/" /> }
+                     <Chat />
                         <Footer /></div>
                 </Route>
                 <Route>

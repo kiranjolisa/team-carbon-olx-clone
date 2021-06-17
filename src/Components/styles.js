@@ -441,6 +441,7 @@ export const ProfileWrapper = styled.div`
         background: #F7F8F9;
         cursor: pointer; 
         color: #002F34;
+        margin-top: 19%;
     }
 
     button:nth-child(2) {
