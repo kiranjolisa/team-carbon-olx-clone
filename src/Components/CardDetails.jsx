@@ -55,7 +55,8 @@ function CardDetails({image, brand, year, model, distance, price, address, postD
                         </div>
                     </div>
                     <Link to = {`/chat?name=Buyer&room=OLX`}><button style = {{cursor: "pointer"}}>Chat with seller</button></Link>
-                    <button>Make an offer</button>
+                    <Link to = {`/chat?name=Buyer&room=OLX`}><button style = {{cursor: "pointer"}}>Make an offer</button></Link>
+                    {/* <button>Make an offer</button> */}
                 </div>
             </div>
         </div>

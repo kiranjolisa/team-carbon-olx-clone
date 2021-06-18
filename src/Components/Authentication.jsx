@@ -21,13 +21,13 @@ function Authentication() {
         let emailElements = email.split('@');
         try {
             await auth.signInWithEmailAndPassword(email, password);
-            alert("login successful");
+            // alert("login successful");
             dispatch(userLoggedIn());
             dispatch(getUserData(emailElements[0]));
             setSignupErr(false);
         } catch {
             setSignupErr(true);
-            alert("failed to log in");
+            // alert("failed to log in");
         }
     }
 

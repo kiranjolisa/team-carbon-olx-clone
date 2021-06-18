@@ -35,7 +35,6 @@ export const wordHashes = {
         en : "SELL",
         hi : "बेचें"
     },
-    //Not added from here to the actual page
     myAds : {
       en : "My Ads",
       hi : "मेरे विज्ञापन"
@@ -71,6 +70,10 @@ export const wordHashes = {
     logout : {
       en : "Logout",
       hi : "लॉगआउट करें"
+    },
+    login : {
+      en: "Login",
+      hi: "लॉगिन"
     }
   };
   

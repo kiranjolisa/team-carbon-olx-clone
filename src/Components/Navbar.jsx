@@ -84,7 +84,7 @@ export const Navbar = () => {
                 </select>
             </div>
             <div>
-                {!isAuth && <button onClick = {() => setShow(true) } >Login</button>}
+                {!isAuth && <button onClick = {() => setShow(true) } >{wordHashes.login[language]}</button>}
                 
                 {isAuth && <Profile/> }
                 <Modal className = {styles.modal} isOpen = {show} onRequestClose = {() => setShow(false)} style={{ overlay: { backgroundColor: "none", opacity: "1"}}}>
