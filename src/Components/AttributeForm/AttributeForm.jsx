@@ -19,15 +19,19 @@ const initState = {
     description : "",
     price : "",
     state : "",
-    defaultName : "Masai School",
+    defaultName : "",
     imageUrls  : [],
     mainCategory : "",
     subCategory : "",
     featured : false
 }
 export const AttributeForm = () => {
+    const {userDisplayPic, contactNumber, firstName, lastName} = useSelector(state => state.userAuthentication);
     const mainCategoryReduxStore = useSelector(state => state.category.mainCategory);
-    const [ form, setForm ] = useState({...initState, mainCategory : mainCategoryReduxStore});
+    const [ form, setForm ] = useState({...initState, 
+        defaultName : firstName !== ""?firstName + " " + lastName : "Masai School", 
+        mainCategory : mainCategoryReduxStore});
+
     const [ imgLoc, setImgLoc ] = useState(new Array(20).fill(null));
     const [ index, setIndex ] = useState(0);
     const [ isUploading, setUploading ] = useState(false);
@@ -202,7 +206,10 @@ export const AttributeForm = () => {
             </HeaderDiv>
             <InputWrapper>
             <ImageWrapper>
-                <img  height = "150px" width = "150px" src = {avatar} alt = 'avatar'/>
+                <img 
+                style = {{borderRadius : "50%"}}
+                 height = "150px" width = "150px" 
+              src = {userDisplayPic === ""? avatar : userDisplayPic} alt = 'avatar'/>
             </ImageWrapper>
             <Label>
                 Name *
@@ -219,7 +226,8 @@ export const AttributeForm = () => {
             &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
             &emsp; &emsp; {defaultName.length}/30</FormSpan>
-            <p>Your phone number is &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; +911234567890</p>
+            <p>Your phone number is 
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;+91 &ensp; {contactNumber === ""? 1234567890 : contactNumber}</p>
             </InputWrapper>
             </DetailsCategory>
             <DetailsCategory>

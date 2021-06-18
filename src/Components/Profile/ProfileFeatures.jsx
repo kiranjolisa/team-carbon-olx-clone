@@ -7,16 +7,21 @@ import {TiBusinessCard} from "react-icons/ti"
 import avatar from "../../Assets/avatar.png"
 import {ProfileFeaturesWrapper} from "../styles"
 import {ProfileItem} from "../styles"
+import { useSelector } from 'react-redux'
 
-export const ProfileFeatures = () => {
+export const ProfileFeatures = () => {   
+    const firstName = useSelector(state => state.userAuthentication.firstName)
+    const userDisplayPic= useSelector(state => state.userAuthentication.userDisplayPic)
     return (
         <>
         <ProfileFeaturesWrapper>
             <div>
-                <img src= {avatar} alt="avatar" />
+                <img 
+                style = {{height : "70px", width : "70px", borderRadius : "50%"}}
+                src= {userDisplayPic === ""? avatar : userDisplayPic} alt="avatar" />
                 <div>
                     <div>Hello,</div>
-                    <div>Kapil</div>
+                    <div>{firstName === ""?"User" : firstName}</div>
                     <div color = "#002F34;">
                         <Link>View and edit profile</Link>
                     </div>

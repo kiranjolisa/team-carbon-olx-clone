@@ -24,7 +24,7 @@ import { useSelector } from 'react-redux'
 
 export const AllRoutes = () => {
 
-    const isAuth = useSelector(state => state.products.isAuth)
+    const isAuth = useSelector(state => state.userAuthentication.auth)
 
 
     return (
