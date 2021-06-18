@@ -5,7 +5,7 @@ import { MobileOutlined,
     ArrowLeftOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import styles from "./Authentication.module.css";
-import { auth } from "../firebase";
+import { auth } from "../Utils/Firebase/index";
 import first from "../Assets/first.jpg";
 import { useDispatch } from 'react-redux';
 import { toggleAuth } from '../Redux/products/action';
