@@ -43,6 +43,7 @@
 
 ## Hosted Platform
 > Backend hosted at https://olx-chat-backend.herokuapp.com/
+> 
 > Frontend not yet hosted(Will be updated once it's deployed)
 
 ## Technologies Used
