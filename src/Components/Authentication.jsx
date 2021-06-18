@@ -1,4 +1,8 @@
-import { MobileOutlined, FacebookOutlined, GoogleOutlined, CloseOutlined, ArrowLeftOutlined } from '@ant-design/icons';
+import { MobileOutlined, 
+    FacebookOutlined, 
+    GoogleOutlined, 
+    CloseOutlined, 
+    ArrowLeftOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import styles from "./Authentication.module.css";
 import { auth } from "../firebase";

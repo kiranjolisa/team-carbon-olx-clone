@@ -4,7 +4,7 @@ const initState = {
     products: [],
     isLoading: false,
     isError: false,
-    isAuth: false
+    isAuth: true
 }
 
 export const getDataReducer = (state = initState, {type, payload}  ) => {

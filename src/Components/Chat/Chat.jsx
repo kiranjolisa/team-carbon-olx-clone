@@ -12,7 +12,7 @@ export const Chat = () => {
    const [ room, setRoom ] = useState("");
    const [ message, setMessage ] = useState("");
    const [ messages, setMessages ] = useState([]);
-   const ENDPOINT = 'localhost:5000';
+   const ENDPOINT = 'https://olx-chat-backend.herokuapp.com/';
 
    useEffect(() => {
       const { name, room } = queryString.parse(window.location.search)
@@ -27,7 +27,7 @@ export const Chat = () => {
       })
 
       return () => {
-         socket.emit('disconnect')
+         socket.disconnect()
          socket.off()
       }
    }, [ENDPOINT, window.location.search])
