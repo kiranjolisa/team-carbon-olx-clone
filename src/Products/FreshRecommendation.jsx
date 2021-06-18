@@ -26,10 +26,10 @@ export const FreshRecommendation = () => {
         <LoadingIndicator/>
     ) : (
         <div> 
-            <h2 style = {{textAlign : "left", marginLeft: "9%", color: "#002F34", fontWeight: "100" }} >Fresh recommendations</h2>
+            <h2 style = {{textAlign : "left", marginLeft: "10.4%", color: "#002F34", fontWeight: "100" }} >Fresh recommendations</h2>
             <div style={{border: "2px solid white", display: 'flex', flexWrap: "wrap", justifyContent: "space-around", marginRight: "9%", marginLeft: "9%"}}>
                 {products.slice(0, visible).map((item) => {
-                    return <VehicleCard {...item} />
+                    return <VehicleCard key = {item.id} {...item} />
                 })}
             </div>
             <LoadMoreButton showMoreItems = {showMoreItems}  />

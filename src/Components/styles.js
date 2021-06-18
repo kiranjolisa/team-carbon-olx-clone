@@ -314,6 +314,65 @@ export const CardWrapper = styled.div`
 
 `
 
+export const PostCardWrapper = styled.div`
+    border: 1px solid #CCD5D6;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    flex-basis: 30%;
+    width: 22%;
+    margin: 2% 2% 1% 8%;
+    flex-wrap: wrap;
+
+    div:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div:nth-child(1) > img {
+        height: 20vh;
+        margin-top: 2%;
+        width: 100%;
+        margin-left: 4%;
+    }
+
+    div:nth-child(1) > button {
+        height: 5vh;
+        border: 0;
+        outline: none;
+        background: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 3% 0 0 14%;
+    }
+
+    div:nth-child(2) {
+        margin-left: 4%;
+        font-size: 20px;
+        font-weight: 700;
+        color: #002F34;
+    }
+
+    div:nth-child(3) {
+        margin-left: 4%;
+        color: #5C7A7D;
+
+    }  
+
+    div:nth-child(4) > p:nth-child(1) {
+        width: 75%;
+    }
+
+    div:nth-child(4) {
+        display: flex;
+        flex-direction: row;
+        margin-left: 4%;
+        font-size: 14px;
+        color: #5C7A7D;
+    }
+
+`
+
 export const CardLinkWrap = styled(Link)`
 text-decoration : none;
 color : inherit;`
@@ -325,7 +384,7 @@ export const LoadMore = styled.div`
         padding: 1%;
         font-size: 17px;
         color: #002F34;
-        margin-top: 0.5%;
+        margin-top: 1%;
         cursor: pointer;
     }
 
@@ -336,72 +395,7 @@ export const LoadMore = styled.div`
     }
 
 `
-export const CarouselCardWrapper = styled.div`
-    border: 1px solid #CCD5D6;
-    border-radius: 5px;
-    text-align: left;
-    margin: 0.5%;
-    cursor: pointer;
-    flex-basis: 22%;
 
-    div:nth-child(1) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    div:nth-child(1) > div {
-        flex-grow: 1;
-    }
-
-    div:nth-child(1) > img{
-        height: 20vh;
-        margin-top: 2%;
-        max-width: 85%;
-    }
-
-    div:nth-child(1) > button {
-        height: 5vh;
-        border: 0;
-        outline: none;
-        background: #ffffff;
-        font-size: 20px;
-        cursor: pointer;
-        margin: 3% 0 0 0;
-    }
-
-    div:nth-child(2) {
-        margin: 0 0 0 5%;
-    }
-
-    div:nth-child(2) > p:nth-child(1) {
-        font-size: 20px;
-        font-weight: 700;
-        color: #002F34;
-        margin-bottom: -0.9%;
-    }
-
-    div:nth-child(2) > p:nth-child(2) {
-        font-size: 14px;
-        margin-bottom: -0.9%;
-        color: #5C7A7D;
-    }
-
-    div:nth-child(2) > p:nth-child(3) {
-        font-size: 14px;
-        margin-bottom: -0.1%;
-        color: #5C7A7D;
-    }
-
-    div:nth-child(3) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 2%;
-        padding-right: 2%;
-        font-size: 12px;
-    }
-`
 export const Scroll = styled.div`
     position: fixed;
     top: 0;
@@ -447,6 +441,7 @@ export const ProfileWrapper = styled.div`
         background: #F7F8F9;
         cursor: pointer; 
         color: #002F34;
+        margin-top: 19%;
     }
 
     button:nth-child(2) {
@@ -530,6 +525,7 @@ export const AdsWrapper = styled.div`
         font-size: 14px;
         margin: 0 0 0 1%;
         text-align: left;
+        border-bottom: 1px solid #CCD5D6;
     }
 
     a:nth-child(2) {
@@ -539,12 +535,18 @@ export const AdsWrapper = styled.div`
         margin-right: 75%;
         text-align: left;
     }
+
+    a:active {
+        border-bottom: 5px solid #002F34;
+    }
 `
 
 export const AdImage = styled.img`
-max-width : 1200px;
-margin-top : 1%;
-height : 250px;
-&:hover{
-    cursor : pointer;
-}`
+    max-width : 1200px;
+    margin-top : 1%;
+    height : 250px;
+
+    &:hover{
+        cursor : pointer;
+    }
+`

@@ -1,6 +1,7 @@
 import styles from "./CardDetails.module.css";
 import { ShareAltOutlined, HeartOutlined } from '@ant-design/icons';
 import avatar from "../Assets/avatar.png"
+import {Link} from "react-router-dom"
 
 function CardDetails({image, brand, year, model, distance, price, address, postDate, description, sellerName, memeberSince, fuel, totalOwners}){
     return (
@@ -53,7 +54,7 @@ function CardDetails({image, brand, year, model, distance, price, address, postD
 
                         </div>
                     </div>
-                    <button>Chat with seller</button>
+                    <Link to = {`/chat?name=Buyer&room=OLX`}><button style = {{cursor: "pointer"}}>Chat with seller</button></Link>
                     <button>Make an offer</button>
                 </div>
             </div>

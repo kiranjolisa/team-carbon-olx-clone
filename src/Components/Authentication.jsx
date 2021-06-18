@@ -10,9 +10,7 @@ import first from "../Assets/first.jpg";
 import { useDispatch } from 'react-redux';
 import { getUserData, userLoggedIn } from '../Redux/UserAuthentication/action';
 
-
 function Authentication() {
-
     const [emailFlag, setEmailFlag] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

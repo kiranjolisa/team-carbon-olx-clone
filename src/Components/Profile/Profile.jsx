@@ -4,7 +4,7 @@ import {FiMessageCircle} from "react-icons/fi"
 import {IoMdNotificationsOutline} from "react-icons/io"
 import avatar from "../../Assets/avatar.png"
 import {RiArrowDownSLine} from "react-icons/ri"
-import {ProfileWrapper} from "../styles"
+import { ProfileWrapper} from "../styles"
 import { ProfileFeatures } from './ProfileFeatures';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -15,9 +15,9 @@ export const Profile = () => {
     const userDisplayPic= useSelector(state => state.userAuthentication.userDisplayPic)
     return (
         <ProfileWrapper>
-           <Link  
-            to = {`/chat?name=Buyer&room=OLX`}>
-                   <button><FiMessageCircle  size = "25px"/></button></Link>
+                <Link to = {`/chat?name=Buyer&room=OLX`}>
+                    <button><FiMessageCircle  size = "25px"/></button>
+                </Link>
             <button><IoMdNotificationsOutline size = "25px"/></button>
             <button onClick = {() => setShow(true) }>
                 <img 
