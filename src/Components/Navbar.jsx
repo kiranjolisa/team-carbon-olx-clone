@@ -19,7 +19,7 @@ export const Navbar = () => {
     const history = useHistory()
     const dispatch = useDispatch();
     const language = useSelector((state) => state.language.lang);
-    const isAuth = useSelector(state => state.products.isAuth)
+    const isAuth = useSelector(state => state.userAuthentication.auth);
 
     const handleSearch = () => {
         if(query === "cars") {

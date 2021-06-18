@@ -8,7 +8,8 @@ import styles from "./Authentication.module.css";
 import { auth } from "../Utils/Firebase/index";
 import first from "../Assets/first.jpg";
 import { useDispatch } from 'react-redux';
-import { toggleAuth } from '../Redux/products/action';
+import { getUserData, userLoggedIn } from '../Redux/UserAuthentication/action';
+
 
 function Authentication() {
 
@@ -19,15 +20,16 @@ function Authentication() {
     const dispatch = useDispatch()
     async function handleNext() {
         console.log(auth.signInWithEmailAndPassword(email, password));
-
+        let emailElements = email.split('@');
         try {
             await auth.signInWithEmailAndPassword(email, password);
-            // alert("login successfully");
-            dispatch(toggleAuth())
+            alert("login successful");
+            dispatch(userLoggedIn());
+            dispatch(getUserData(emailElements[0]));
             setSignupErr(false);
         } catch {
             setSignupErr(true);
-            // alert("failed to log in");
+            alert("failed to log in");
         }
     }
 

@@ -4,7 +4,6 @@ const initState = {
     products: [],
     isLoading: false,
     isError: false,
-    isAuth: false
 }
 
 export const getDataReducer = (state = initState, {type, payload}  ) => {
@@ -189,13 +188,6 @@ export const getDataReducer = (state = initState, {type, payload}  ) => {
                 ...state,
                 isLoading: false,
                 isError: true
-            }
-        }
-
-        case TOGGLE_AUTH: {
-            return {
-                ...state,
-                isAuth: true
             }
         }
 
