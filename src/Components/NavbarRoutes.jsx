@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import { RoutesNavbarWrapper } from './styles'
 import {RiArrowDownSLine} from "react-icons/ri"
-
-import { wordHashes } from "../Utils/BilingualData"
 import { useSelector } from 'react-redux'
+
+import { RoutesNavbarWrapper } from './styles'
+import { wordHashes } from "../Utils/BilingualData"
 
 export const NavbarRoutes = () => {
     const language = useSelector((state) => state.language.lang);

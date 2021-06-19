@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import {Link} from "react-router-dom"
 import {AdsWrapper} from "./styles"
 import {FiHeart} from "react-icons/fi"
+
 import {PostCardWrapper} from "./styles"
 
 

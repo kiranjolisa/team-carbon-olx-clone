@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+
 import {getCarsData} from "../Redux/products/action"
 import { VehicleCard } from './Cards/VehicleCard'
 import {LoadingIndicator} from "../Components/LoadingIndicator"
@@ -12,13 +13,9 @@ export const Commerical = () => {
     const [visible, setVisible] = React.useState(10)
 
     React.useEffect(() => {
-        showData()
+        dispatch(getCarsData())
     }, [dispatch])
     
-    const showData = () => {
-        dispatch(getCarsData())
-    }
-
     const showMoreItems = () => {
         setVisible((prev) => prev + 10)
     }

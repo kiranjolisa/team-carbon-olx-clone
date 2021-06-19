@@ -1,7 +1,9 @@
+import {Link} from "react-router-dom"
+
 import styles from "./CardDetails.module.css";
 import { ShareAltOutlined, HeartOutlined } from '@ant-design/icons';
 import avatar from "../Assets/avatar.png"
-import {Link} from "react-router-dom"
+
 
 function CardDetails({image, brand, year, model, distance, price, address, postDate, description, sellerName, memeberSince, fuel, totalOwners}){
     return (

@@ -1,4 +1,4 @@
-import { SearchOutlined, DownOutlined, UpOutlined } from '@ant-design/icons';
+import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 
 function FilterForRent(){

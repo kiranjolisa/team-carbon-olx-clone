@@ -1,14 +1,14 @@
 import React from 'react'
 import Modal from "react-modal";
 import {useDispatch, useSelector } from "react-redux";
-import { NavbarWrapper, SellButton, StyledLink} from './styles'
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {FiSearch} from "react-icons/fi"
+
+import { NavbarWrapper, SellButton, StyledLink} from './styles'
 import olxPostLogo from '../Assets/olxPostLogo.svg';
 import { indianStates } from './AttributeForm/AttributeFormElements'
 import Authentication from "./Authentication"
 import styles from "./Modal.module.css"
-import { useHistory } from 'react-router-dom';
 import { Profile } from './Profile/Profile';
 import { switchToEnglish, switchToHindi } from '../Redux/LanguageTranslator/action';
 import { wordHashes } from "../Utils/BilingualData"

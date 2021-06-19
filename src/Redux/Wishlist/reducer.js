@@ -1,9 +1,15 @@
-import { ADD_WISHLIST_FAILURE, ADD_WISHLIST_REQUEST, ADD_WISHLIST_SUCCESS } from "./actionTypes"
+import {
+    ADD_WISHLIST_FAILURE,
+    ADD_WISHLIST_REQUEST,
+    ADD_WISHLIST_SUCCESS
+} from "./actionTypes"
+
 const inistState = {
-    wishlist : []
+    wishlist: []
 }
-export const reducer = (state = inistState, {type, payload}) => {
-    switch(type) {
+
+export const reducer = (state = inistState, { type, payload }) => {
+    switch (type) {
         case ADD_WISHLIST_REQUEST: {
             return {
                 ...state

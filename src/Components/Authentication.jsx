@@ -1,13 +1,14 @@
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import { MobileOutlined, 
     FacebookOutlined, 
     GoogleOutlined, 
     CloseOutlined, 
     ArrowLeftOutlined } from '@ant-design/icons';
-import { useState } from 'react';
+
 import styles from "./Authentication.module.css";
 import { auth } from "../Utils/Firebase/index";
 import first from "../Assets/first.jpg";
-import { useDispatch } from 'react-redux';
 import { getUserData, userLoggedIn } from '../Redux/UserAuthentication/action';
 
 function Authentication() {

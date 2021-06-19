@@ -9,15 +9,15 @@ import { reducer as AuthDataReducer } from "./UserAuthentication/reducer";
 import { getDataReducer } from "./products/reducer";
 
 const rootReducer = combineReducers({
-    category : categoryReducer,
-    postAd : postAdReducer,
-    products : getDataReducer,
-    dynamicContent : dynamicDataReducer,
+    category: categoryReducer,
+    postAd: postAdReducer,
+    products: getDataReducer,
+    dynamicContent: dynamicDataReducer,
     language: languageReducer,
-    wishlist  : wishlistReducer,
-    userAuthentication : AuthDataReducer
+    wishlist: wishlistReducer,
+    userAuthentication: AuthDataReducer
 })
 
-export const store = createStore(rootReducer, 
-    compose(applyMiddleware(thunk), 
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()))
+export const store = createStore(rootReducer,
+    compose(applyMiddleware(thunk),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()))

@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import { useSelector } from 'react-redux'
+
 import {BiSpreadsheet, BiHelpCircle} from "react-icons/bi"
 import {RiLogoutBoxLine, RiListSettingsLine,RiDownloadLine } from "react-icons/ri"
 import {IoIosBusiness} from "react-icons/io"
@@ -7,7 +9,6 @@ import {TiBusinessCard} from "react-icons/ti"
 import avatar from "../../Assets/avatar.png"
 import {ProfileFeaturesWrapper} from "../styles"
 import {ProfileItem} from "../styles"
-import { useSelector } from 'react-redux'
 import { wordHashes } from "../../Utils/BilingualData";
 
 

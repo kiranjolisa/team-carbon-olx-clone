@@ -1,7 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
-import { ArrowSpan, BorderBox, Categories, CategoriesList, CategoryItems, PostAttributeLink, SubHeader } from "./RenderCategoriesStyles";
+import { ArrowSpan, 
+    BorderBox, 
+    Categories, 
+    CategoriesList, 
+    CategoryItems, 
+    PostAttributeLink, 
+    SubHeader } from "./RenderCategoriesStyles";
 
 import { ReactComponent as OlxAuto } from '../../Assets/olxAuto.svg'
 import { ReactComponent as PropertiesIcon } from '../../Assets/propertiesIcon.svg'
