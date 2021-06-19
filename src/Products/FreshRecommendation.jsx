@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+
 import { getFreshRecommendationData } from '../Redux/products/action'
 import { VehicleCard } from './Cards/VehicleCard'
 import {LoadingIndicator} from "../Components/LoadingIndicator"
@@ -11,12 +12,8 @@ export const FreshRecommendation = () => {
     const [visible, setVisible] = React.useState(12)
 
     React.useEffect(() => {
-        showData()
-    }, [])
-    
-    const showData = () => {
         dispatch(getFreshRecommendationData())
-    }
+    }, [dispatch])
     
     const showMoreItems = () => {
         setVisible((prev) => prev + 13)

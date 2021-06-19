@@ -2,12 +2,13 @@ import React from 'react'
 import Modal from "react-modal";
 import {FiMessageCircle} from "react-icons/fi"
 import {IoMdNotificationsOutline} from "react-icons/io"
+import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
+
 import avatar from "../../Assets/avatar.png"
 import {RiArrowDownSLine} from "react-icons/ri"
 import { ProfileWrapper} from "../styles"
 import { ProfileFeatures } from './ProfileFeatures';
-import { Link } from "react-router-dom";
-import { useSelector } from 'react-redux';
 
 export const Profile = () => {
 

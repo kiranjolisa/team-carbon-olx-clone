@@ -1,6 +1,7 @@
 import React from 'react'
 import { useWindowScroll } from 'react-use'
 import {IoIosArrowUp} from "react-icons/io"
+
 import {Scroll} from "./styles"
 
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import {FiHeart} from "react-icons/fi"
+
 import {CardLinkWrap, CardWrapper} from "../../Components/styles"
 
 export const HouseCard = ({image, price, address, postDate, bedrooms, bathrooms, carParking, category, id}) => {

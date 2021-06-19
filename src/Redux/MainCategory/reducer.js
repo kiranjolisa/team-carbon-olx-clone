@@ -1,14 +1,14 @@
 import { SET_MAIN_CATEGORY } from "./actionTypes"
 
 const initState = {
-    mainCategory :""
+    mainCategory: ""
 }
 export const reducer = (state = initState, { type, payload }) => {
-    switch(type){
+    switch (type) {
         case SET_MAIN_CATEGORY:
-            return{
+            return {
                 ...state,
-                mainCategory : payload
+                mainCategory: payload
             }
 
         default:

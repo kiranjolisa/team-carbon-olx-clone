@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
+
 import { LeftArrow, LinkedArrow, NavLogo, StyledNav } from "./NavbarStyles";
+
 import leftArrow from '../../Assets/leftArrow.svg';
 import olxPostLogo from '../../Assets/olxPostLogo.svg';
 

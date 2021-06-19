@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+
 import {getRentHouseData} from "../Redux/products/action"
 import {LoadingIndicator} from "../Components/LoadingIndicator"
 import { HouseCard } from './Cards/HouseCard'
@@ -12,12 +13,9 @@ export const HouseForRent = () => {
     const [visible, setVisible] = React.useState(10)
     
     React.useEffect(() => {
-        showData()
-    }, [dispatch])
-    
-    const showData = () => {
         dispatch(getRentHouseData())
-    }
+    }, [dispatch])
+
     
     const showMoreItems = () => {
         setVisible((prev) => prev + 10)

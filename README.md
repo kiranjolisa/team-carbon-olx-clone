@@ -12,7 +12,7 @@
 > npm install
 > npm start
 > ```
-> After entering the commands mentioned above, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> After entering the commands mentioned above, open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

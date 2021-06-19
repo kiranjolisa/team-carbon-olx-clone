@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import queryString from "query-string"
 import io from "socket.io-client"
+
 import { ChatContainer } from "./ChatElements"
 import InfoBar from "./InfoBar";
 import Input from "./Input";
@@ -30,7 +31,7 @@ export const Chat = () => {
          socket.disconnect()
          socket.off()
       }
-   }, [ENDPOINT, window.location.search])
+   }, [ENDPOINT])
    useEffect(() => {
       socket.on('message', (message) => {
          setMessages([...messages,message]);
