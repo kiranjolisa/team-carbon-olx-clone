@@ -54,7 +54,7 @@
 
 > ## &ensp; HTML &emsp; &ensp;CSS &emsp; &ensp; Javascript &emsp; React
 
-## Snapshot from the Built Product
+## Snapshots from the Built Product
 > <img src="https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/readmeImgs%2FLandingPage.png?alt=media&token=109e46f7-8748-483e-9edb-043042cabf12" width="405" height="200"  alt = "OLX Landing page"/>
 
 > <img src="https://firebasestorage.googleapis.com/v0/b/olx-clone-image-store.appspot.com/o/readmeImgs%2FloginPage.png?alt=media&token=57200643-27fb-4123-a365-e64694baefca" width="200" height="150"  alt = "login"/>
