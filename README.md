@@ -44,7 +44,7 @@
 ## Hosted Platform
 > Backend hosted at https://olx-chat-backend.herokuapp.com/
 > 
-> Frontend not yet hosted(Will be updated once it's deployed)
+> Frontend hosted at https://olx-clone-swart.vercel.app
 
 ## Technologies Used
 > <img src = "https://i.stack.imgur.com/PgcSR.png" width = "100" height = "100" alt = "HTML Logo"/>
