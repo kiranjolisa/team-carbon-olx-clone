@@ -3,6 +3,18 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Logotyp_OLX_.png" width="400" height="300"  alt = "OLX Logo"/>
 
+### Login Credentials
+
+### User name: rajat@gmail.com
+### Password: user123
+
+### User name: kiran@gmail.com
+### Password: user123
+
+### User name: kapil@gmail.com
+### Password: user123
+
+
 ## Installing and Running
 > Executing the commands mentioned below one by one in your command line will help in making this React app up and running on your system in the development mode.
 > 
