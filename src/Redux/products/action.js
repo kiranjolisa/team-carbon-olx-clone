@@ -52,9 +52,10 @@ export const getCarsFailure = () => {
 
 export const getCarsData = payload => dispatch => {
     dispatch(getCarsRequest())
-    axios.get("https://json-server-olx.herokuapp.com/cars")
+    axios.get("https://json-mock-server.vercel.app/cars")
         .then(res => {
             dispatch(getCarsSuccess(res.data))
+            console.log(res.data)
         })
         .catch(err => {
             dispatch(getCarsFailure())
@@ -84,7 +85,7 @@ export const getMotorcyclesFailure = () => {
 
 export const getMotorcyclesData = payload => dispatch => {
     dispatch(getMotorcyclesRequest())
-    axios.get("https://json-server-olx.herokuapp.com/motorcycles")
+    axios.get("https://json-mock-server.vercel.app/motorcycles")
         .then(res => {
             dispatch(getMotorcyclesSuccess(res.data))
         })
@@ -117,7 +118,7 @@ export const getMobilesFailure = () => {
 
 export const getMobilesData = payload => dispatch => {
     dispatch(getMobilesRequest())
-    axios.get("https://json-server-olx.herokuapp.com/mobiles")
+    axios.get("https://json-mock-server.vercel.app/cars")
         .then(res => {
             dispatch(getMobilesSuccess(res.data))
         })
@@ -150,7 +151,7 @@ export const getSalesHouseFailure = () => {
 
 export const getSalesHouseData = payload => dispatch => {
     dispatch(getSalesHouseRequest())
-    axios.get("https://json-server-olx.herokuapp.com/salesHouse")
+    axios.get("https://json-mock-server.vercel.app/sales")
         .then(res => {
             dispatch(getSalesHouseSuccess(res.data))
         })
@@ -183,7 +184,7 @@ export const getScootersFailure = () => {
 
 export const getScootersData = payload => dispatch => {
     dispatch(getScootersRequest())
-    axios.get("https://json-server-olx.herokuapp.com/scooters")
+    axios.get("https://json-mock-server.vercel.app/motorcycles")
         .then(res => {
             dispatch(getScootersSuccess(res.data))
         })
@@ -215,7 +216,7 @@ export const getCommericalFailure = () => {
 
 export const getCommericalData = payload => dispatch => {
     dispatch(getCommericalRequest())
-    axios.get("https://json-server-olx.herokuapp.com/commerical")
+    axios.get("https://json-mock-server.vercel.app/fresh")
         .then(res => {
             dispatch(getCommericalSuccess(res.data))
         })
@@ -248,7 +249,7 @@ export const getRentHouseFailure = () => {
 
 export const getRentHouseData = payload => dispatch => {
     dispatch(getRentHouseRequest())
-    axios.get("https://json-server-olx.herokuapp.com/rentHouse")
+    axios.get("https://json-mock-server.vercel.app/rent")
         .then(res => {
             dispatch(getRentHouseSuccess(res.data))
         })
@@ -280,7 +281,7 @@ export const getFreshRecommendationFailure = () => {
 
 export const getFreshRecommendationData = payload => dispatch => {
     dispatch(getFreshRecommendationRequest())
-    axios.get("https://json-server-olx.herokuapp.com/freshRecommendation")
+    axios.get("https://json-mock-server.vercel.app/fresh")
         .then(res => {
             dispatch(getFreshRecommendationSuccess(res.data))
         })

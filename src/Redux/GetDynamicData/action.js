@@ -4,7 +4,7 @@ import { GET_DYNAMIC_DATA_FAILURE, GET_DYNAMIC_DATA_REQUEST, GET_DYNAMIC_DATA_SU
 
 export const getDynamicData = (payload) => (dispatch) => {
     dispatch(getDynamicDataRequest())
-    axios.get(`https://json-server-olx.herokuapp.com/${payload.category}?id=${payload.id}`)
+    axios.get(`https://json-mock-server.vercel.app/${payload.category}?id=${payload.id}`)
         .then(res => {
             dispatch(getDynamicDataSuccess(res.data));
         })

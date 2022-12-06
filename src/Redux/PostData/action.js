@@ -4,7 +4,7 @@ import { POST_AD_FAILURE, POST_AD_REQUEST, POST_AD_SUCCESS, UNSET_SUCCESS_STATUS
 
 export const postAd = (payload) => (dispatch) => {
     console.log(payload);
-    axios.post('https://json-server-olx.herokuapp.com/postAd', payload)
+    axios.post('https://json-mock-server.vercel.app/postDataToCart', payload)
         .then(res => {
             dispatch(postAdSuccess(payload))
         })

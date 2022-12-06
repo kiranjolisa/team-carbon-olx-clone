@@ -25,14 +25,14 @@ export const Navbar = () => {
         if(query === "cars") {
             history.push("/cars")
         }
-        else if(query === "motor cycles") {
+        else if(query === "motor cycles || motor") {
             history.push("/motorcycles")
         }
         else if(query === "mobiles") {
             history.push("/mobiles")
         }
         else if(query === "sales") {
-            history.push("/salesHouse")
+            history.push("/saleHouse")
         }
         else if(query === "scooters") {
             history.push("/scooters")

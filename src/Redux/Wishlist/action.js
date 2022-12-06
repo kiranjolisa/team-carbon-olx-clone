@@ -20,7 +20,7 @@ export const addWishlistFailure = () => {
 }
 export const addWhishlist = (payload) => (dispatch) => {
     dispatch(addWishlistRequest())
-    axios.get(`https://json-server-olx.herokuapp.com/${payload.category}?id=${payload.id}`)
+    axios.get(`https://json-mock-server.vercel.app/${payload.category}?id=${payload.id}`)
         .then(res => {
             dispatch(addWishlistSuccess(res.data[0]))
         })
